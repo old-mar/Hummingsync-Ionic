@@ -4,7 +4,7 @@
 	height: 56px;
 }
 .title {
-	padding-top: 6px;
+	padding-top: 7px;
 }
 .button.button-clear.icon.ion-android-menu {
 	font-size: 10px;
@@ -15,6 +15,14 @@
 	font-size: 10px;
 	margin-right: 1px;
 	margin-top: 1px;
+}
+.button.button-clear.icon.ion-android-refresh.ink {
+	margin-right: -5px;
+	margin-top: 6px;
+}
+.button.button-clear.icon.ion-android-more-vertical.ink {
+	margin-right: 1px;
+	margin-top: 6px;
 }
 /*End header bar css*/
 .icon.ion-android-add {
