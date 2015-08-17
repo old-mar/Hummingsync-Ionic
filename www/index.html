@@ -46,7 +46,7 @@
       <pane side-menu-content>
         <ion-nav-bar class="bar-dark">
           <ion-nav-buttons side="left">
-            <button class="button button-clear icon ion-android-menu" menu-toggle="left"></button>
+            <button class="button button-clear icon ion-android-menu ink" menu-toggle="left"></button>
           </ion-nav-buttons>
         </ion-nav-bar>
       </pane>
@@ -62,7 +62,7 @@
               Watching
             </div>
             <a class="item item-icon-right ink" ng-repeat="anime in animelist" ng-click="openModal()">
-            {{anime.name}}
+            {{anime.anime.title}}
             </a>
           </div>
         <ion-nav-view>
