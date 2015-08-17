@@ -1,0 +1,22 @@
+/* Empty. Add your own CSS if you like */
+/*Header bar css*/
+.bar-dark {
+	height: 56px;
+}
+.title {
+	padding-top: 6px;
+}
+.button.button-clear.icon.ion-android-menu {
+	font-size: 10px;
+	margin-left: 10px;
+	margin-top: 7px;
+}
+.button.button-clear.icon.ion-android-more-vertical {
+	font-size: 10px;
+	margin-right: 1px;
+	margin-top: 1px;
+}
+/*End header bar css*/
+.icon.ion-android-add {
+	font-size: 20px;
+}
