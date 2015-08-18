@@ -1,0 +1,15 @@
+<ion-view title="Anime">
+
+ 
+	<ion-content>
+		<div class="list">
+			<div class="item item-divider">
+				Watching
+			</div>
+			<a class="item item-icon-right ink" ng-repeat="anime in animelist" ng-click="openModal()">
+			{{anime.anime.title}}
+			</a>
+		</div>
+	</ion-content>
+
+</ion-view>
