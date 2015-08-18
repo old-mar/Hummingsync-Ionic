@@ -6,8 +6,19 @@
 			<div class="item item-divider">
 				Watching
 			</div>
-			<a class="item item-icon-right ink" ng-repeat="anime in animelist" ng-click="openModal()">
+			<a class="card ink" ng-repeat="anime in animelist" ng-click="openModal()">
+			<img src="{{anime.anime.cover_image}}" height="142" width="98" class="coverimage">
+			<div class="cardinfo">
 			{{anime.anime.title}}
+			<br>
+			{{anime.anime.alternate_title}}
+			<br>
+			Watched: {{anime.episodes_watched}}/{{anime.anime.episode_count}}
+			<br>
+			Rating: {{anime.rating.value*2}}
+			<br>
+			Status: {{anime.anime.status}}
+			</div>
 			</a>
 		</div>
 	</ion-content>

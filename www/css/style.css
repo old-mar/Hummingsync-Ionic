@@ -28,3 +28,17 @@
 .icon.ion-android-add {
 	font-size: 20px;
 }
+
+
+.cardinfo {
+	font-family: sans-serif;
+	font-size: 15px;
+	display: block;
+	float: right;
+
+
+}
+
+.card.ink.coverimage {
+	display: block;
+}
