@@ -5,6 +5,13 @@
     "ionic": "driftyco/ionic-bower#1.1.0"
   },
   "dependencies": {
-    "pouchdb": "~4.0.0"
+    "pouchdb": "~4.0.0",
+    "ionic-material": "~0.4.2"
+  },
+  "resolutions": {
+    "ionic": "1.1.0",
+    "angular": "1.4.3",
+    "angular-animate": "1.4.3",
+    "angular-sanitize": "1.4.3"
   }
 }

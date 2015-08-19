@@ -55,7 +55,7 @@ angular.module('starter', ['ionic', 'ionic-material'])
 
 	.state('animelist.animeinfo', {
 	  url: '/animelist/animeinfo',
-	  templateUrl: 'animeinfo/animeinfo.html'
+	  templateUrl: 'animeinfo/animeinfo.html',
 	  controller: 'AnimeInfoCtrl'
 	}); 
 	//   .state('tab.task-detail', {
