@@ -43,6 +43,12 @@ angular.module('starter', ['ionic', 'ionic-material'])
     templateUrl: 'anime/anime.html',
     controller: 'AnimeCtrl'
   });
+
+  // .state('animelist.animeinfo', {
+  //   url: '/animelist/animeinfo',
+  //   templateUrl: 'animeinfo/animeinfo.html'
+  //   controller: 'AnimeInfoCtrl'
+  // }); 
   //   .state('tab.task-detail', {
   //     url: '/dash/:taskId',
   //     views: {

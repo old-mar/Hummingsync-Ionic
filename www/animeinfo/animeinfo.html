@@ -1,11 +1,8 @@
-<ion-view title="Anime">
+<ion-view title="{{anime.anime.title}}">
 
  
 	<ion-content>
 		<div class="list">
-			<div class="item item-divider">
-				Watching
-			</div>
 			<a class="card ink" ng-repeat="anime in animelist" ng-click="openSelectedAnime(anime.anime.id">
 			<img src="{{anime.anime.cover_image}}" height="142" width="98" class="coverimage">
 			<div class="cardinfo">
