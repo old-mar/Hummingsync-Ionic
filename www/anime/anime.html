@@ -7,7 +7,7 @@
 				Watching
 			</div>
 			<a class="card ink" ng-repeat="anime in animelist" ng-click="openSelectedAnime(anime.anime.id">
-			<img src="{{anime.anime.cover_image}}" height="142" width="98" class="coverimage">
+			<img ng-src="{{anime.anime.cover_image}}" height="142" width="98" class="coverimage">
 			<div class="cardinfo">
 			{{anime.anime.title}}
 			<br>

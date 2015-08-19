@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic', 'ionic-material'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, DbService) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -15,6 +15,9 @@ angular.module('starter', ['ionic', 'ionic-material'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+    // Initialise DB after Ionic loaded and ready.
+    DbService.initDB();
   });
 })
 
