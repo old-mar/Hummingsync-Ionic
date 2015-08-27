@@ -1,13 +1,13 @@
 /* Empty. Add your own CSS if you like */
 /*Header bar css*/
-.bar-dark {
+.bar-energized-900 {
 	height: 56px;
 }
 .title {
 	padding-top: 7px;
 }
-.button.button-clear.icon.ion-android-menu {
-	font-size: 10px;
+.ion-android-menu {
+	font-size: 10px !important;
 	margin-left: 10px;
 	margin-top: 7px;
 }
@@ -31,7 +31,7 @@
 
 
 .cardinfo {
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 	display: inline;
 	float: left;
