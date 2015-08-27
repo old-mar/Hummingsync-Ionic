@@ -34,10 +34,27 @@
 	font-family: sans-serif;
 	font-size: 15px;
 	display: inline;
-	float: right;
-
+	float: left;
+	margin-left: 120px;
+	margin-top: -127px;
+	margin-bottom: 0px;
+	padding-right: 10px;
 }
 
-.card.ink.coverimage {
+.coverimage {
+	padding-bottom: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.card.ink.item {
+	height: 145px !important;
+	padding-top: -1000px !important;
+	padding-bottom: -1000px !important;
+	width: 360px !important;
+}
+
+.animelisttitle {
+	font-weight: bold;
+	font-size: 15px;
 
 }

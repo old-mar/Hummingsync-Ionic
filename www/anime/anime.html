@@ -6,10 +6,10 @@
 			<div class="item item-divider">
 				Watching
 			</div>
-			<a class="card ink" ng-repeat="anime in animelist" ng-click="openSelectedAnime(anime.anime.id">
+			<ion-item class="card ink" collection-repeat="anime in animelist" item-render-buffer="20">
 			<img ng-src="{{anime.anime.cover_image}}" height="142" width="98" class="coverimage">
 			<div class="cardinfo">
-			{{anime.anime.title}}
+			<div class="animelisttitle">{{anime.anime.title}}</div>
 			<br>
 			{{anime.anime.alternate_title}}
 			<br>
@@ -20,8 +20,11 @@
 			Status: {{anime.anime.status}}
 			<br>
 			</div>
-			</a>
+			</ion-item>
 		</div>
 	</ion-content>
 	<button class="button button-positive button-fab button-fab-bottom-right ink icon ion-android-search"></button>
 </ion-view>
+
+
+<!--  ng-click="openSelectedAnime(anime.anime.id" -->
