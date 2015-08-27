@@ -1,10 +1,8 @@
 angular.module('starter')
-.controller('AnimeCtrl', function($scope, ionicMaterialInk, Animes, DbService) {
+.controller('AnimeCtrl', function($scope, $timeout, ionicMaterialInk, Animes, DbService) {
   ionicMaterialInk.displayEffect();
 
-  DbService.getAll().then(function(res) {
-  	$scope.animelist = res;
-  });
+  $scope.animelist = Animes.animelist;
 
   $scope.openSelectedAnime = function(animeId) {
   		Animes.selectedAnimeId = animeId;

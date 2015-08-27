@@ -6,7 +6,7 @@
 angular.module('starter', ['ionic', 'ionic-material'])
 
 
-.run(function($ionicPlatform, DbService) {
+.run(function($ionicPlatform, DbService, Animes) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -18,7 +18,9 @@ angular.module('starter', ['ionic', 'ionic-material'])
     }
 
     // Initialise DB after Ionic loaded and ready.
-    DbService.initDB();
+    DbService.initDB().then(function(res) {
+    	Animes.animelist = res;
+    });
   });
 
 })
