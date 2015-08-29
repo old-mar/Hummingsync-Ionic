@@ -1,6 +1,7 @@
 angular.module('starter')
-.controller('AnimeCtrl', function($scope, ionicMaterialInk, Animes, DbService) {
+.controller('AnimeCtrl', function($scope, $state, ionicMaterialInk, ionicMaterialMotion, Animes, DbService) {
   ionicMaterialInk.displayEffect();
+  ionicMaterialMotion.blinds();
 
   DbService.getAll().then(function(res) {
   	$scope.animelist = res;
@@ -9,8 +10,8 @@ angular.module('starter')
   $scope.openSelectedAnime = function(animeId) {
   		Animes.selectedAnimeId = animeId;
   		console.log(animeId);
-  		$stage.go('anime.animeinfo');
-  	}
+  		$state.go('animeinfo');
+  }
 });
 // .controller('AnimeInfoCtrl', function($scope) {
 

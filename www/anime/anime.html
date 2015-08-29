@@ -6,12 +6,12 @@
 			<div class="item item-divider">
 				Watching
 			</div>
-			<ion-item class="card ink" collection-repeat="anime in animelist" item-render-buffer="20">
+			<ion-item class="card ink" collection-repeat="anime in animelist" item-render-buffer="20" ng-click="openSelectedAnime(anime.id)">
 			<img ng-src="{{anime.anime.cover_image}}" height="142" width="98" class="coverimage">
 			<div class="cardinfo">
 			<div class="animelisttitle">{{anime.anime.title}}</div>
 			<br>
-			{{anime.anime.alternate_title}}
+			{{anime.anime.id}}
 			<br>
 			Watched: {{anime.episodes_watched}}/{{anime.anime.episode_count}}
 			<br>

@@ -53,7 +53,7 @@ angular.module('starter', ['ionic', 'ionic-material'])
 		controller: 'AnimeCtrl'
 	})
 
-	.state('animelist.animeinfo', {
+	.state('animeinfo', {
 	  url: '/animelist/animeinfo',
 	  templateUrl: 'animeinfo/animeinfo.html',
 	  controller: 'AnimeInfoCtrl'

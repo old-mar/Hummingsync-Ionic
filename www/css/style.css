@@ -2,27 +2,36 @@
 /*Header bar css*/
 .bar-energized-900 {
 	height: 56px;
+	background-color: dark-orange !important;
 }
 .title {
 	padding-top: 7px;
 }
-.ion-android-menu {
-	font-size: 10px !important;
+.ion-android-menu:before {
+	font-size: 24px !important;
 	margin-left: 10px;
-	margin-top: 7px;
+	margin-top: 12px;
 }
 .button.button-clear.icon.ion-android-more-vertical {
 	font-size: 10px;
 	margin-right: 1px;
 	margin-top: 1px;
 }
-.button.button-clear.icon.ion-android-refresh.ink {
-	margin-right: -5px;
-	margin-top: 6px;
+.button.button-clear.icon.ion-android-refresh.ink:before {
+	font-size: 24px;
+	padding-top: 20px;
+	margin-top: -9px;
+	margin-right: -15px;
 }
-.button.button-clear.icon.ion-android-more-vertical.ink {
+.button.button-clear.icon.ion-android-more-vertical.ink:before {
+	font-size: 24px;
 	margin-right: 1px;
-	margin-top: 6px;
+	margin-top: 8px;
+}
+.ion-android-arrow-back:before {
+	font-size: 24px !important;
+	margin-left: 15px;
+	padding-top: 16px;
 }
 /*End header bar css*/
 .icon.ion-android-add {
