@@ -73,10 +73,12 @@
 /*Anime Detail page*/
 .animedetailcontent {
 	margin-top: -130px;
+	background-color: #727272;
 }
 .coverimagemax {
 	margin-top: -44px;
-	width: 375px;
+	height: 250px;
+
 }
 .coverimagelarge {
 	/*height: 142px;*/
@@ -93,16 +95,26 @@
 	height: 100px;
 	font-size: 24px;
 	color: white;
-	padding-left: 160px;
+	padding-left: 150px;
 	background-color: #727272;
+}
+.detailalternativetitle {
+	margin-left: 150px;
+	margin-top: -48px;
+	padding-bottom: 40px;
+	color: #D3D3D3;
+	opacity: 0.6;
 }
 .cardsubtitle {
 	margin-left: 8px;
-	margin-top: 12px;
+	margin-top: -5px;
 	font-size: 14px;
 	font-weight: bold;
 	padding-left: 10px;
 	color: #727272;
+}
+.watchednumber {
+	margin-left: 18px;
 }
 .add-episode-button {
 	margin-left: 300px;
@@ -110,9 +122,10 @@
 .card {
 	width: 356px;
 }
-.cardsubtitle.synopsistitle {
+.synopsistitle {
 	text-align: center;
 	margin-left: -8px;
+	margin-top: 10px;
 	padding-bottom: 10px;
 }
 .synopsis {
