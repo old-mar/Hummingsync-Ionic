@@ -3,9 +3,7 @@ angular.module('starter')
   ionicMaterialInk.displayEffect();
   ionicMaterialMotion.blinds();
 
-  DbService.getAll().then(function(res) {
-  	$scope.animelist = res;
-  });
+  $scope.animelist = Animes.animelist;
 
   $scope.openSelectedAnime = function(animeId) {
   		Animes.selectedAnimeId = animeId;

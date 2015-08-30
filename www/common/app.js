@@ -18,9 +18,13 @@ angular.module('starter', ['ionic', 'ionic-material'])
     }
 
     // Initialise DB after Ionic loaded and ready.
-    DbService.initDB();
+    DbService.initDB().then(function(res) {
+    	console.log(res);
+    	DbService.getAll().then(function(res) {
+    		console.log(res);
+    	});
+    });
   });
-
 })
 
 .config(['$compileProvider', function($compileProvider) {
