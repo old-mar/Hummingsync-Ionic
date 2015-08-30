@@ -25,6 +25,9 @@
     <script src="anime/anime.controller.js"></script>
     <script src="common/db.service.js"></script>
     <script src="animeinfo/animeinfo.controller.js"></script>
+    <script src="common/sidemenu.controller.js"></script>
+    <script src="debug/debug.controller.js"></script>
+    <script src="debug/debug.service.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -73,7 +76,7 @@
           <!-- <ion-header-bar class="bar-clear"> 
             <h1 class="title">Lists</h1>
           </ion-header-bar> -->
-          <ion-content class="has-subheader">
+          <ion-content class="has-subheader" ng-controller='SideMenuCtrl'>
             <div class="list">
             <a class="item item-divider">
              Logged in as Username
@@ -95,6 +98,9 @@
             </a>
             <a class="item">
              App Preferences
+            </a>
+            <a class="item" ng-click='goToDebug()'>
+             Debug
             </a>
             <a class="item">
              Log Out

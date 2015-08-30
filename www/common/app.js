@@ -6,7 +6,7 @@
 angular.module('starter', ['ionic', 'ionic-material'])
 
 
-.run(function($ionicPlatform, DbService) {
+.run(function($ionicPlatform, DbService, DebugService) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -17,10 +17,14 @@ angular.module('starter', ['ionic', 'ionic-material'])
       StatusBar.styleDefault();
     }
 
+    DebugService.add('should always have something here');
+
     // Initialise DB after Ionic loaded and ready.
     DbService.initDB().then(function(res) {
+    	DebugService.add(res);
     	console.log(res);
     	DbService.getAll().then(function(res) {
+    		DebugService.add(res);
     		console.log(res);
     	});
     });
@@ -61,7 +65,13 @@ angular.module('starter', ['ionic', 'ionic-material'])
 	  url: '/animelist/animeinfo',
 	  templateUrl: 'animeinfo/animeinfo.html',
 	  controller: 'AnimeInfoCtrl'
-	}); 
+	})
+
+	.state('debug', {
+		url: '/debug',
+		templateUrl: 'debug/debug.html',
+		controller: 'DebugCtrl'
+	});
 	//   .state('tab.task-detail', {
 	//     url: '/dash/:taskId',
 	//     views: {
