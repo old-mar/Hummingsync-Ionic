@@ -50,7 +50,7 @@
     <ion-side-menus>
       <!-- MAIN CONTENT -->
       <ion-pane ion-side-menu-content>
-        <ion-nav-bar class="bar-energized-900">
+        <ion-nav-bar class="bar-energized-900" hide-on-scroll="true">
         <ion-nav-title>Hummingbird</ion-nav-title>
           <ion-nav-back-button class="button-clear">
           <i class="ion-android-arrow-back"></i>
@@ -61,7 +61,7 @@
           <ion-nav-buttons side="right">
             <!-- <a class="button button-clear icon ion-android-refresh ink" href="https://hummingbird.me/api/v1/users/cyalins/library.json" download="library"></a> -->
             <button class="button button-clear icon ion-android-refresh ink" ng-click="DbService.refresh()"></button>
-            <button class="button button-clear icon ion-android-more-vertical ink" menu-toggle="left"></button>
+            <button class="button button-clear icon ion-android-more-vertical ink"></button>
           </ion-nav-buttons>
         </ion-nav-bar>
 

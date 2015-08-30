@@ -1,23 +1,56 @@
-<ion-view title="Anime: {{anime.anime.title}}">
+<ion-view title="`{{anime.anime.title}}">
 
- 
+ 	<link href="css/animeinfostyle.css" rel="stylesheet"></link>
 	<ion-content>
-		<div class="list">
-			<a class="card ink">
-			<img src="{{anime.anime.cover_image}}" height="142" width="98" class="coverimage">
-			<div class="cardinfo">
-			{{anime.anime.title}}
+		<img src="https://static.hummingbird.me/anime/cover_images/000/008/646/thumb/851886b3a3.jpg?1421335818" class="coverimagemax">
+		<div class="animedetailcontent">
+			<img src="https://static.hummingbird.me/anime/poster_images/000/008/646/large/Duyhhtw.jpg?1426772654" height="142" width="98" class="coverimagelarge">
 			<br>
-			{{anime.anime.alternate_title}}
-			<br>
-			Watched: {{anime.episodes_watched}}/{{anime.anime.episode_count}}
-			<br>
-			Rating: {{anime.rating.value*2}}
-			<br>
-			Status: {{anime.anime.status}}
+			<div class="detailtitle">
+			Kekkai Sensen {{anime.anime.title}}
 			</div>
-			</a>
+			<div class="list">
+			<ion-item class="card">
+			<br>
+			<div class="detailalternativetitle">
+			Blood Blockade Battlefront {{anime.anime.alternate_title}}
+			</div>
+			<div class="cardsubtitle">
+			WATCHED
+			</div>
+			<div class="watchednumber">
+			11 {{anime.episodes_watched}}/ 12 {{anime.anime.episode_count}}
+			</div>
+			Rating: 8.14{{anime.rating.value*2}}
+			<br>
+			Status: Currently Airing{{anime.anime.status}}
+			</ion-item>
+			<div class="list card">
+				<div class="cardsubtitle synopsistitle">
+					Synopsis
+				</div>
+				<p class="synopsis">
+					A breach between Earth and the netherworlds has opened up over the city of New York, trapping New Yorkers and creatures from other dimensions in an impenetrable bubble. They've lived together for years, in a world of crazy crime sci-fi sensibilities. Now someone is threatening to sever the bubble, and a group of stylish superhumans is working to keep it from happening.
+				</p>
+			</div>
+			<div class="list card">
+				<div class="cardsubtitle synopsistitle">
+					Synopsis
+				</div>
+				<p class="synopsis">
+					A breach between Earth and the netherworlds has opened up over the city of New York, trapping New Yorkers and creatures from other dimensions in an impenetrable bubble. They've lived together for years, in a world of crazy crime sci-fi sensibilities. Now someone is threatening to sever the bubble, and a group of stylish superhumans is working to keep it from happening.
+				</p>
+			</div>
+			<div class="list card">
+				<div class="cardsubtitle synopsistitle">
+					Synopsis
+				</div>
+				<p class="synopsis">
+					A breach between Earth and the netherworlds has opened up over the city of New York, trapping New Yorkers and creatures from other dimensions in an impenetrable bubble. They've lived together for years, in a world of crazy crime sci-fi sensibilities. Now someone is threatening to sever the bubble, and a group of stylish superhumans is working to keep it from happening.
+				</p>
+			</div>
 		</div>
+			
 	</ion-content>
 
 </ion-view>

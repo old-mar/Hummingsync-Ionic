@@ -2,14 +2,14 @@
 /*Header bar css*/
 .bar-energized-900 {
 	height: 56px;
-	background-color: dark-orange !important;
+	background-color: #FF5722 !important;
 }
 .title {
 	padding-top: 7px;
 }
 .ion-android-menu:before {
 	font-size: 24px !important;
-	margin-left: 10px;
+	margin-left: 16px;
 	margin-top: 12px;
 }
 .button.button-clear.icon.ion-android-more-vertical {
@@ -30,14 +30,16 @@
 }
 .ion-android-arrow-back:before {
 	font-size: 24px !important;
-	margin-left: 15px;
+	margin-left: 16px;
 	padding-top: 16px;
 }
 /*End header bar css*/
 .icon.ion-android-add {
 	font-size: 20px;
 }
-
+.scroll-content {
+	overflow: visible !important;
+}
 
 .cardinfo {
 	font-family: 'Roboto', sans-serif;
@@ -55,15 +57,67 @@
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
+
 .card.ink.item {
 	height: 145px !important;
 	padding-top: -1000px !important;
 	padding-bottom: -1000px !important;
 	width: 360px !important;
 }
-
 .animelisttitle {
 	font-weight: bold;
 	font-size: 15px;
 
+}
+
+/*Anime Detail page*/
+.animedetailcontent {
+	margin-top: -130px;
+}
+.coverimagemax {
+	margin-top: -44px;
+	width: 375px;
+}
+.coverimagelarge {
+	/*height: 142px;*/
+	height: 156.2px;
+	width: 98px;
+	width: 107.8px;
+	margin-left: 20px;
+	margin-top: 60px;
+}
+
+.detailtitle {
+	margin-top: -96px;
+	padding-top: 30px;
+	height: 100px;
+	font-size: 24px;
+	color: white;
+	padding-left: 160px;
+	background-color: #727272;
+}
+.cardsubtitle {
+	margin-left: 8px;
+	margin-top: 12px;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 10px;
+	color: #727272;
+}
+.add-episode-button {
+	margin-left: 300px;
+}
+.card {
+	width: 356px;
+}
+.cardsubtitle.synopsistitle {
+	text-align: center;
+	margin-left: -8px;
+	padding-bottom: 10px;
+}
+.synopsis {
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 5px;
+	text-align: center;
 }

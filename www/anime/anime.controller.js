@@ -12,6 +12,7 @@ angular.module('starter')
   		console.log(animeId);
   		$state.go('animeinfo');
   }
+  // document.getElementById('button-fab').classList.toggleClass('spiral-back');
 });
 // .controller('AnimeInfoCtrl', function($scope) {
 
