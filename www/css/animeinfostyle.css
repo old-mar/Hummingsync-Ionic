@@ -15,3 +15,16 @@
 	color: #B6B6B6;
 	margin-left: 5px;
 }
+.button-block {
+	margin-bottom: 4px !important;
+	margin-left: 4px;
+	width: 345px !important	;
+}
+.watchednumberinput {
+	width: 30px;
+	margin-left: 10px !important;
+	margin-right: 200px !important;
+}
+.item-input {
+	/*margin-left: -100px !important;*/
+}

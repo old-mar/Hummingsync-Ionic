@@ -1,4 +1,4 @@
-<ion-view title="`{{anime.anime.title}}">
+<ion-view title="-{{anime.anime.title}}">
 
  	<link href="css/animeinfostyle.css" rel="stylesheet"></link>
 	<ion-content>
@@ -19,11 +19,13 @@
 			WATCHED
 			</div>
 			<div class="watchednumber">
-			11 {{anime.episodes_watched}}/ 12 {{anime.anime.episode_count}}
+			<label class="item item-input"><input class="watchednumberinput" type="number" value="11"> {{anime.episodes_watched}}/ 12 {{anime.anime.episode_count}} </label>
 			</div>
 			Rating: 8.14{{anime.rating.value*2}}
 			<br>
 			Status: Currently Airing{{anime.anime.status}}
+			<br>
+			<button class="button button-block button-raised button-positive ink-dark">Update</button>
 			</div>
 			<div class="list card">
 				<div class="cardsubtitle synopsistitle">
