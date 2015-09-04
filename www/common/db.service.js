@@ -34,8 +34,8 @@ angular.module('starter')
   };
 
   // Fetch a document
-  function get(doc) {
-    return $q.when(_db.get(doc));
+  function get(docId) {
+    return $q.when(_db.get(docId));
   };
 
   // Fetch all documents and return an array

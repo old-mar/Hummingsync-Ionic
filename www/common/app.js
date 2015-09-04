@@ -28,6 +28,7 @@ angular.module('starter', ['ionic', 'ionic-material'])
     		console.log(res);
     	});
     });
+    
   });
 })
 
@@ -62,7 +63,7 @@ angular.module('starter', ['ionic', 'ionic-material'])
 	})
 
 	.state('animeinfo', {
-	  url: '/animelist/animeinfo',
+	  url: '/animelist/animeinfo/{animeId}',
 	  templateUrl: 'animeinfo/animeinfo.html',
 	  controller: 'AnimeInfoCtrl'
 	})
