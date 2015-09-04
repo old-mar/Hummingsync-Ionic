@@ -18,7 +18,7 @@ angular.module('starter', ['ionic', 'ionic-material'])
     }
 
     DebugService.add('should always have something here');
-
+    
     // Initialise DB after Ionic loaded and ready.
     DbService.initDB().then(function(res) {
     	DebugService.add(res);

@@ -83,9 +83,10 @@ angular.module('starter')
   };
 
   function refresh() {
+    console.log('Hit refresh 1');
     _db.destroy().then(function() {
       
-      console.log('Hit refresh');
+      console.log('Hit refresh 2');
       _db.info().then(function(res) {
         console.log('db document count: ' + res.doc_count);
         if (res.doc_count === 0) {
