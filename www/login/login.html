@@ -1,0 +1,23 @@
+<ion-view title="Log In">
+
+ 	<link href="css/loginstyle.css" rel="stylesheet"></link>
+	<ion-content ng-controller="LoginCtrl">
+		<img src="https://static.hummingbird.me/anime/poster_images/000/009/130/large/godeater.jpg?1434556996" class="backgroundimage">
+		<p class="hummingsync">Hummingsync</p>
+		<form ng-submit="submitLogin()">
+
+			<label class="item item-input username">
+			<input type="text" align="middle" placeholder="Username">
+			</label>
+			<br>
+			<label class="item item-input password">
+			<input type="password" placeholder="Password">
+			</label>
+			<button class="button button-raised button-assertive ink" ng-click="goToAnime()">log in</button>
+		</form>
+
+	</ion-content>
+</ion-view>
+
+
+<!--  ng-click="openSelectedAnime(anime.anime.id" -->

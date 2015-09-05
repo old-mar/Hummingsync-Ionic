@@ -5,4 +5,10 @@ angular.module('starter')
   	$state.go('debug');
   };
 
+  $scope.goToAnime = function() {
+  	$state.go('animelist');
+  };
+  $scope.goToLogin = function() {
+  	$state.go('login');
+  };
 });

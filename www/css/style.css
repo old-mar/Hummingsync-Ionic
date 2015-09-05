@@ -3,9 +3,11 @@
 .bar-energized-900 {
 	height: 56px;
 	background-color: #FF5722 !important;
+	box-shadow: 10px;
 }
 .title {
 	padding-top: 7px;
+	opacity: 1;
 }
 .ion-android-menu:before {
 	font-size: 24px !important;

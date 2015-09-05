@@ -1,0 +1,43 @@
+.bar-energized-900 {
+	background-color: none !important;
+	background: transparent !important;
+	border: none !important;
+	border-style: none !important;
+	box-shadow: none;
+}
+.username {
+	/*margin-top: -500px;*/
+	margin-left: 56px;
+	width: 260px;
+	background-color: white;
+	text-align: center;
+}
+.password {
+	background-color: white;
+	margin-left: 56px;
+	width: 260px;
+}
+
+.backgroundimage {
+	margin-top: -56px;
+	height: 676px;
+}
+
+.button-clear {
+	opacity: 0;
+}
+.title {
+	opacity: 0;
+}
+.button-assertive {
+	opacity: 1;
+	margin-top: 20px;
+	margin-left: 126px;
+}
+.hummingsync {
+	font-size: 23px;
+	color: white;
+	text-align: center;
+	margin-bottom: 32px;
+	margin-top: -530px !important;
+}

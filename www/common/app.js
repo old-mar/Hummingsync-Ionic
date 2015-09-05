@@ -44,7 +44,7 @@ angular.module('starter', ['ionic', 'ionic-material'])
 	// Each state's controller can be found in controllers.js
 
 	// if none of the below states are matched, use this as the fallback
-	$urlRouterProvider.otherwise('/animelist');
+	$urlRouterProvider.otherwise('/login');
 
 	$stateProvider
 	// setup an abstract state for the tabs directive
@@ -55,6 +55,11 @@ angular.module('starter', ['ionic', 'ionic-material'])
 	// })
 
 	// Each tab has its own nav history stack:
+	.state('login', {
+		url: '/login',
+		templateUrl: 'login/login.html',
+		controller: 'LoginCtrl'
+	})
 
 	.state('animelist', {
 		url: '/animelist',
