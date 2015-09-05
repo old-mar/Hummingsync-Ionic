@@ -16,16 +16,21 @@
 			<div class="card">
 			<br>
 			<div class="cardsubtitle">
-			WATCHED
+			Status
+			</div>
+			Currently Watching
+			<div class="cardsubtitle">
+			Watched
 			</div>
 			<div class="watchednumber">
-			<label class="item item-input"><input class="watchednumberinput" type="number" value="11"> {{anime.episodes_watched}}/ 12 {{anime.anime.episode_count}} </label>
+			11 {{anime.episodes_watched}}/ 12 {{anime.anime.episode_count}}
+			<button class="button button-clear button-assertive ink" style="font-size: 16px;">+1</button>
 			</div>
 			Rating: 8.14{{anime.rating.value*2}}
 			<br>
 			Status: Currently Airing{{anime.anime.status}}
 			<br>
-			<button class="button button-block button-raised button-positive ink-dark">Update</button>
+			<button class="button button-block button-clear button-assertive ink-dark" ng-click="openAnimeEdit(animeId)">edit entry</button>
 			</div>
 			<div class="card">
 				<div class="cardsubtitle synopsistitle">
@@ -43,18 +48,34 @@
 				<div class="cardsubtitle">
 					Community Rating
 				</div>
-					8.14 / 10
+					8.14 {{anime.rating.value*2}} / 10
+				<div class="cardsubtitle">
+					Rating
+				</div>
+					R17+
+				<div class="cardsubtitle">
+					Type
+				</div>
+					TV
+				<div class="cardsubtitle">
+					Started Airing
+				</div>
+					5th April 2015
+				<div class="cardsubtitle">
+					Finished Airing
+				</div>
+					---
+				<a class="button button-block button-clear button-assertive ink" href="https://youtu.be/2l4u3FEBwPs" target="_blank">watch trailer</a>
 			</div>
 			<div class="list card">
 				<div class="cardsubtitle synopsistitle">
-					Synopsis
+					Reviews
 				</div>
 				<p class="synopsis">
 					A breach between Earth and the netherworlds has opened up over the city of New York, trapping New Yorkers and creatures from other dimensions in an impenetrable bubble. They've lived together for years, in a world of crazy crime sci-fi sensibilities. Now someone is threatening to sever the bubble, and a group of stylish superhumans is working to keep it from happening.
 				</p>
 			</div>
-		</div>
-			
-	</ion-content>
 
+		</div>
+	</ion-content>
 </ion-view>

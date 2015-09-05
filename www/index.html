@@ -86,7 +86,7 @@
             <a class="item item-divider">
              My Library
             </a>
-            <a class="item" ng-click="/animelist">
+            <a class="item" ng-click="animelist">
              Anime
             </a>
             <a class="item">
@@ -111,4 +111,62 @@
     </ion-side-menus>
 
   </body>
+
+<script id="editanime.html" type="text/ng-template">
+
+  <div class="modal">
+
+    <!-- Modal header bar -->
+    <ion-header-bar class="bar-dark">
+      <button class="button button-icon button-clear icon ion-android-arrow-back" ng-click="closeAnimeEdit()"></button>
+      <h1 class="title">Edit Library Entry</h1>
+    
+    </ion-header-bar>
+
+    <!-- Modal content area -->
+    <ion-content>
+
+      <form ng-submit="createTask()">
+        <div class="cardsubtitle">
+      Status
+      </div>
+      <label class="item item-input item-select">
+        <select>
+          <option selected>Currently Watching</option>
+          <option>Plan to Watch</option>
+          <option>Completed</option>
+          <option>On Hold</option>
+          <option>Dropped</option>
+          <option>Remove from list</option>
+        </select>
+      </label>
+      <div class="cardsubtitle">
+      Watched
+      </div>
+      <div class="watchednumber">
+      <label class="item item-input"><input class="watchednumberinput" type="number" value="11"> {{anime.episodes_watched}}/ 12 {{anime.anime.episode_count}} </label>
+      </div>
+      Rating: 8.14{{anime.rating.value*2}}
+      <br>
+      Status: Currently Airing{{anime.anime.status}}
+      <br>
+      <div class="cardsubtitle">
+      Private
+      </div>
+      <div class="cardsubtitle">
+      Rewatching
+      </div>
+      <div class="cardsubtitle">
+      Notes
+      </div>
+      <input class="item item-input">
+        <textarea placeholder="Notes"></textarea>
+      <button class="button button-block button-raised button-positive ink-dark">Update</button>
+      </form>
+
+    </ion-content>
+
+  </div>
+
+</script>
 </html>
