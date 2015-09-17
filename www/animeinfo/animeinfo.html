@@ -1,4 +1,4 @@
-<ion-view title="-{{anime.anime.title}}">
+<ion-view title="{{anime.anime.title}}">
 
  	<link href="css/animeinfostyle.css" rel="stylesheet"></link>
 	<ion-content>
@@ -7,29 +7,41 @@
 			<img src="https://static.hummingbird.me/anime/poster_images/000/008/646/large/Duyhhtw.jpg?1426772654" height="142" width="98" class="coverimagelarge">
 			<br>
 			<div class="detailtitle">
-			Kekkai Sensen {{anime.anime.title}}
+				Kekkai Sensen {{anime.anime.title}}
 			</div>
 			<div class="detailalternativetitle">
-			Blood Blockade Battlefront {{anime.anime.alternate_title}}
+				Blood Blockade Battlefront {{anime.anime.alternate_title}}
 			</div>
 			<div class="list">
-			<div class="card">
-			<br>
-			<div class="cardsubtitle">
-			Status
-			</div>
-			Currently Watching
-			<div class="cardsubtitle">
-			Watched
-			</div>
-			<div class="watchednumber">
-			11 {{anime.episodes_watched}}/ 12 {{anime.anime.episode_count}}
-			<button class="button button-clear button-assertive ink" style="font-size: 16px;">+1</button>
-			</div>
-			Rating: 8.14{{anime.rating.value*2}}
-			<br>
-			Status: Currently Airing{{anime.anime.status}}
-			<br>
+				<div class="card">
+				<br>
+				<div class="cardsubtitle">
+					Status
+				</div>
+				<div class="cardsubdetail">
+					Currently Watching
+				</div>
+				<div class="cardsubtitleright">
+					Watched
+				</div>
+				<div class="cardsubdetailright">
+					11 {{anime.episodes_watched}}/ 12 {{anime.anime.episode_count}}
+				</div>
+				<div class="add-episode-button">
+				<button class="button button-clear button-assertive ink" style="font-size: 16px;">+1</button>
+				</div>
+				<div class="cardsubtitle">
+					Rating
+				</div>
+				<div class="cardsubdetail">
+					8.14{{anime.rating.value*2}}
+				</div>
+				<div class="cardsubtitleright">
+					Rewatched Count
+				</div>
+				<div class="cardsubdetailright">
+					0
+				</div>
 			<button class="button button-block button-clear button-assertive ink-dark" ng-click="openAnimeEdit(animeId)">edit entry</button>
 			</div>
 			<div class="card">
@@ -41,30 +53,42 @@
 				</p>
 			</div>
 			<div class="list card">
-				<div class="cardsubtitle">
+				<div class="cardsubtitle" style="padding-top: 20px;">
 					Airing Status
 				</div>
+				<div class="cardsubdetail">
 					Currently Airing
-				<div class="cardsubtitle">
+				</div>
+				<div class="cardsubtitleright">
 					Community Rating
 				</div>
+				<div class="cardsubdetailright">
 					8.14 {{anime.rating.value*2}} / 10
+				</div>
 				<div class="cardsubtitle">
 					Rating
 				</div>
+				<div class="cardsubdetail">
 					R17+
-				<div class="cardsubtitle">
+				</div>
+				<div class="cardsubtitleright">
 					Type
 				</div>
+				<div class="cardsubdetailright">
 					TV
+				</div>
 				<div class="cardsubtitle">
 					Started Airing
 				</div>
+				<div class="cardsubdetail">
 					5th April 2015
-				<div class="cardsubtitle">
+				</div>
+				<div class="cardsubtitleright">
 					Finished Airing
 				</div>
+				<div class="cardsubdetailright">
 					---
+				</div>
 				<a class="button button-block button-clear button-assertive ink" href="https://youtu.be/2l4u3FEBwPs" target="_blank">watch trailer</a>
 			</div>
 			<div class="list card">

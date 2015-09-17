@@ -29,15 +29,24 @@
 .title {
 	opacity: 0;
 }
-.button-assertive {
+.login-button {
 	opacity: 1;
 	margin-top: 20px;
-	margin-left: 126px;
+	margin-left: 130px;
 }
 .hummingsync {
 	font-size: 23px;
 	color: white;
-	text-align: center;
+	margin-left: 112px;
 	margin-bottom: 32px;
 	margin-top: -530px !important;
 }
+.button.back-button.buttons.button-clear.header-item {
+	visibility: hidden;
+	opacity: 0;
+}
+.ion-android-menu {
+	visibility: hidden;
+	opacity: 0;
+}
+

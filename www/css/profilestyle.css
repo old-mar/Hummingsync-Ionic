@@ -1,0 +1,37 @@
+.bar-energized-900 {
+	background-color: none !important;
+	background: transparent !important;
+	border: none !important;
+	border-style: none !important;
+	box-shadow: none;
+}
+.title {
+	opacity: 0;
+}
+.backgroundimage {
+	height: 211px;
+	margin-top: -44px;
+}
+.userheader {
+	margin-top: -42px;
+	color: white;
+	text-align: center;
+	font-size: 22px;
+}
+
+.avatarimage {
+	margin-top: 20px;
+	margin-left: 130px;
+	max-height: 80px !important;
+	max-width: 80px !important;
+}
+
+/*Hiding the Back button*/
+.button.back-button.buttons.button-clear.header-item {
+	visibility: hidden;
+	opacity: 0;
+}
+.ion-android-menu {
+	position: relative;
+	left: -56px;
+}

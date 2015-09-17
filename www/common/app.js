@@ -28,7 +28,9 @@ angular.module('starter', ['ionic', 'ionic-material'])
     		console.log(res);
     	});
     });
-    
+
+    DbService.refresh();
+
   });
 })
 
@@ -44,7 +46,7 @@ angular.module('starter', ['ionic', 'ionic-material'])
 	// Each state's controller can be found in controllers.js
 
 	// if none of the below states are matched, use this as the fallback
-	$urlRouterProvider.otherwise('/login');
+	$urlRouterProvider.otherwise('/app/animelist');
 
 	$stateProvider
 	// setup an abstract state for the tabs directive
@@ -54,26 +56,39 @@ angular.module('starter', ['ionic', 'ionic-material'])
 	//   templateUrl: 'animelist.html'
 	// })
 
+	
 	// Each tab has its own nav history stack:
-	.state('login', {
+	.state('app', {
+		url: '/app',
+		templateUrl: 'common/app.html',
+		abstract: true
+	})
+
+	.state('app.login', {
 		url: '/login',
 		templateUrl: 'login/login.html',
 		controller: 'LoginCtrl'
 	})
 
-	.state('animelist', {
+	.state('app.profile', {
+		url: '/profile',
+		templateUrl: 'profile/profile.html',
+		controller: 'ProfileCtrl'
+	})
+
+	.state('app.animelist', {
 		url: '/animelist',
 		templateUrl: 'anime/anime.html',
 		controller: 'AnimeCtrl'
 	})
 
-	.state('animeinfo', {
+	.state('app.animeinfo', {
 	  url: '/animelist/animeinfo/{animeId}',
 	  templateUrl: 'animeinfo/animeinfo.html',
 	  controller: 'AnimeInfoCtrl'
 	})
 
-	.state('debug', {
+	.state('app.debug', {
 		url: '/debug',
 		templateUrl: 'debug/debug.html',
 		controller: 'DebugCtrl'

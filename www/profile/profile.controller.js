@@ -1,5 +1,5 @@
 angular.module('starter')
-.controller('LoginCtrl', function($scope, $state, $http,  DebugService, ionicMaterialInk, ionicMaterialMotion, Animes, DbService) {
+.controller('ProfileCtrl', function($scope, $state, $http,  DebugService, ionicMaterialInk, ionicMaterialMotion, Animes, DbService) {
   ionicMaterialInk.displayEffect();
   ionicMaterialMotion.blinds();
   $scope.goToAnime = function() {

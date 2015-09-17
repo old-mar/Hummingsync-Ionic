@@ -1,14 +1,16 @@
 angular.module('starter')
-.controller('SideMenuCtrl', function($scope, $state) {
+.controller('SideMenuCtrl', function($scope, $state, $location) {
 
   $scope.goToDebug = function() {
-  	$state.go('debug');
+  	$state.go('app.debug', {reload: true});
   };
-
+  $scope.goToProfile = function() {
+  	$state.go('app.profile');
+  };
   $scope.goToAnime = function() {
-  	$state.go('animelist');
+  	$state.go('app.animelist');
   };
   $scope.goToLogin = function() {
-  	$state.go('login');
+  	$state.go('app.login');
   };
 });

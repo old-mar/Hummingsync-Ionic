@@ -2,7 +2,7 @@
 
  	<link href="css/style.css" rel="stylesheet"></link>
 	<ion-content ng-controller="AnimeCtrl">
-	<ion-refresher pulling-icon="ion-android-refresh" spinner="android" on-refresh="refresh"></ion-refresher>
+		<ion-refresher pulling-icon="ion-android-refresh" spinner="android" on-refresh="refresh()"></ion-refresher>
 		<div class="list">
 			<div class="item item-divider">
 				Watching
@@ -20,7 +20,7 @@
 			<br>
 			Status: {{anime.anime.status}}
 			<br>
-			{{ anime.id + 5}}
+			<!-- {{ anime.id + 5}} -->
 			</div>
 			</ion-item>
 		</div>

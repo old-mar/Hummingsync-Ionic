@@ -1,0 +1,61 @@
+<ion-view> 
+  <ion-side-menus enable-menu-with-back-views="true">
+    <!-- MAIN CONTENT -->
+    <ion-pane ion-side-menu-content>
+      <ion-nav-bar class="bar-energized-900" hide-on-scroll="true">
+      <ion-nav-title>Hummingbird</ion-nav-title>
+        <ion-nav-back-button class="button-clear">
+          <i class="ion-android-arrow-back"></i>
+        </ion-nav-back-button>
+        <ion-nav-buttons side="left">
+          <button class="button button-clear icon ion-android-menu ink" menu-toggle="left"></button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+          <!-- <a class="button button-clear icon ion-android-refresh ink" href="https://hummingbird.me/api/v1/users/cyalins/library.json" download="library"></a> -->
+          <button class="button button-clear icon ion-android-more-vertical ink"></button>
+        </ion-nav-buttons>
+      </ion-nav-bar>
+
+      <ion-nav-view animation="fade-in-out"></ion-nav-view> <!-- This is where the view is injected-->
+    </ion-pane>
+
+    <!-- LEFT MENU -->
+    <ion-side-menu side="left">
+        <!-- <ion-header-bar class="bar-clear"> 
+          <h1 class="title">Lists</h1>
+        </ion-header-bar> -->
+        <ion-content class="has-subheader" ng-controller='SideMenuCtrl'>
+          <div class="list">
+          <a class="item item-divider">
+           Logged in as Username
+          </a>
+          <a class="item" ng-click="goToProfile()" menu-toggle="left">
+           My Profile
+          </a>
+          <a class="item item-divider">
+           My Library
+          </a>
+          <a class="item" ng-click="goToAnime()" menu-toggle="left">
+           Anime
+          </a>
+          <a class="item">
+           Manga
+          </a>
+          <a class="item item-divider">
+           Options
+          </a>
+          <a class="item">
+           App Preferences
+          </a>
+          <a class="item" ng-click='goToDebug()' menu-toggle="left">
+           Debug
+          </a>
+          <a class="item" ng-click="goToLogin()" menu-toggle="left">
+           Log Out
+          </a>
+        </div>
+        </ion-content>
+      </ion-view>
+    </ion-side-menu>
+  </ion-side-menus>
+</ion-view>
