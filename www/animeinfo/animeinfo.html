@@ -4,7 +4,9 @@
 	<ion-content>
 		<img src="https://static.hummingbird.me/anime/cover_images/000/008/646/thumb/851886b3a3.jpg?1421335818" class="coverimagemax">
 		<div class="animedetailcontent">
-			<img src="https://static.hummingbird.me/anime/poster_images/000/008/646/large/Duyhhtw.jpg?1426772654" height="142" width="98" class="coverimagelarge">
+			<a ng-click="openImage()">
+				<img src="https://static.hummingbird.me/anime/poster_images/000/008/646/large/Duyhhtw.jpg?1426772654" height="142" width="98" class="coverimagelarge">
+			</a>
 			<br>
 			<div class="detailtitle">
 				Kekkai Sensen {{anime.anime.title}}
@@ -103,3 +105,25 @@
 		</div>
 	</ion-content>
 </ion-view>
+
+<script id="openimage.html" type="text/ng-template">
+
+  <div class="modal" style="background-color: black;">
+
+    <!-- Modal header bar -->
+    <ion-header-bar class="bar-dark" style="background: transparent !important;	box-shadow: none;">
+      <button class="button button-icon button-clear icon ion-android-close" ng-click="closeImage()" style="color: gray;"></button>
+      <h1 class="title">Poster Image</h1>
+    
+    </ion-header-bar>
+
+    <!-- Modal content area -->
+    <ion-content>
+
+    <img src="https://static.hummingbird.me/anime/poster_images/000/008/646/large/Duyhhtw.jpg?1426772654" height="553" width="376" class="coverimageopen" style="margin-top: 15px;">
+
+    </ion-content>
+
+  </div>
+
+</script>

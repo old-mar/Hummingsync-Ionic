@@ -15,10 +15,24 @@ angular.module('starter')
     animation: 'slide-in-right'
   });
 
+  $ionicModal.fromTemplateUrl('openimage.html', function(modal) {
+    $scope.imageModal = modal;
+  }, {
+    scope: $scope,
+    animation: 'slide-in-right'
+  });
+
   $scope.openAnimeEdit = function(animeId) {
   	$scope.editModal.show();
   };
   $scope.closeAnimeEdit = function() {
   	$scope.editModal.hide();
+  };
+
+  $scope.openImage = function() {
+    $scope.imageModal.show();
+  };
+  $scope.closeImage = function() {
+    $scope.imageModal.hide();
   };
 });
