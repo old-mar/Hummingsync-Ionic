@@ -1,5 +1,5 @@
 angular.module('starter')
-.controller('AnimeCtrl', function($scope, $state, $http,  DebugService, ionicMaterialInk, ionicMaterialMotion, Animes, DbService) {
+.controller('AnimeCtrl', function($scope, $state, $http,  DebugService, ionicMaterialInk, ionicMaterialMotion, Animes, DbService, filterFilter) {
   ionicMaterialInk.displayEffect();
   ionicMaterialMotion.blinds();
   $scope.animelist = Animes.animelist;
@@ -24,8 +24,9 @@ angular.module('starter')
 	};
 
   $scope.openSelectedAnime = function(animeId) {
-  		Animes.selectedAnimeId = animeId;
+  		Animes.selectedAnime = filterFilter(Animes.animelist, {id: animeId});
   		console.log(animeId);
+  		console.log(Animes.selectedAnime[0]);
   		$state.go('app.animeinfo', {animeId: animeId});
   }
   // document.getElementById('button-fab').classList.toggleClass('spiral-back');

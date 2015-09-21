@@ -3,7 +3,7 @@ angular.module('starter')
   
   var animelist = [];
 
-  var selectedAnimeId = undefined;
+  var selectedAnime = undefined;
   return {
     animelist: animelist,
     selectedAnimeId: selectedAnimeId

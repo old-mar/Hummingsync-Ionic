@@ -3,9 +3,10 @@ angular.module('starter')
   
   $stateParams.animeId == undefined;
   ionicMaterialInk.displayEffect();
-  $scope.anime = DbService.get($stateParams.animeId);
-  console.log($stateParams.animeId);
+  // $scope.anime = DbService.get($stateParams.animeId);
+  // console.log($stateParams.animeId);
 
+  $scope.anime = Animes.selectedAnime[0];
 
   //editor
   $ionicModal.fromTemplateUrl('editanime.html', function(modal) {

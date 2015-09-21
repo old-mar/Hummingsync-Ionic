@@ -2,18 +2,19 @@
 
  	<link href="css/animeinfostyle.css" rel="stylesheet"></link>
 	<ion-content>
-		<img src="https://static.hummingbird.me/anime/cover_images/000/008/646/thumb/851886b3a3.jpg?1421335818" class="coverimagemax">
+		<!-- <img src="https://static.hummingbird.me/anime/cover_images/000/008/646/thumb/851886b3a3.jpg?1421335818" class="coverimagemax"> -->
 		<div class="animedetailcontent">
 			<a ng-click="openImage()">
-				<img src="https://static.hummingbird.me/anime/poster_images/000/008/646/large/Duyhhtw.jpg?1426772654" height="142" width="98" class="coverimagelarge">
+				<img src="{{anime.anime.cover_image}}" height="142" width="98" class="coverimagelarge">
 			</a>
 			<br>
 			<div class="detailtitle">
-				Kekkai Sensen {{anime.anime.title}}
+				{{anime.anime.title}}
+				<div class="detailalternativetitle">
+				{{anime.anime.alternate_title}}
+				</div>
 			</div>
-			<div class="detailalternativetitle">
-				Blood Blockade Battlefront {{anime.anime.alternate_title}}
-			</div>
+			
 			<div class="list">
 				<div class="card">
 				<br>
@@ -27,7 +28,7 @@
 					Watched
 				</div>
 				<div class="cardsubdetailright">
-					11 {{anime.episodes_watched}}/ 12 {{anime.anime.episode_count}}
+					{{anime.episodes_watched}} / {{anime.anime.episode_count}}
 				</div>
 				<div class="add-episode-button">
 				<button class="button button-clear button-assertive ink" style="font-size: 16px;">+1</button>
@@ -36,13 +37,13 @@
 					Rating
 				</div>
 				<div class="cardsubdetail">
-					8.14{{anime.rating.value*2}}
+					{{anime.rating.value*2}} / 10
 				</div>
 				<div class="cardsubtitleright">
 					Rewatched Count
 				</div>
 				<div class="cardsubdetailright">
-					0
+					{{anime.rewatched_times}}
 				</div>
 			<button class="button button-block button-clear button-assertive ink-dark" ng-click="openAnimeEdit(animeId)">edit entry</button>
 			</div>
@@ -51,7 +52,7 @@
 					Synopsis
 				</div>
 				<p class="synopsis">
-					A breach between Earth and the netherworlds has opened up over the city of New York, trapping New Yorkers and creatures from other dimensions in an impenetrable bubble. They've lived together for years, in a world of crazy crime sci-fi sensibilities. Now someone is threatening to sever the bubble, and a group of stylish superhumans is working to keep it from happening.
+					{{anime.anime.synopsis}}
 				</p>
 			</div>
 			<div class="list card">
@@ -59,37 +60,37 @@
 					Airing Status
 				</div>
 				<div class="cardsubdetail">
-					Currently Airing
+					{{anime.anime.status}}
 				</div>
 				<div class="cardsubtitleright">
 					Community Rating
 				</div>
 				<div class="cardsubdetailright">
-					8.14 {{anime.rating.value*2}} / 10
+					{{anime.anime.community_rating*2}} / 10
 				</div>
 				<div class="cardsubtitle">
 					Rating
 				</div>
 				<div class="cardsubdetail">
-					R17+
+					{{anime.anime.age_rating}}
 				</div>
 				<div class="cardsubtitleright">
 					Type
 				</div>
 				<div class="cardsubdetailright">
-					TV
+					{{anime.anime.show_type}}
 				</div>
 				<div class="cardsubtitle">
 					Started Airing
 				</div>
 				<div class="cardsubdetail">
-					5th April 2015
+					{{anime.anime.started_airing}}
 				</div>
 				<div class="cardsubtitleright">
 					Finished Airing
 				</div>
 				<div class="cardsubdetailright">
-					---
+					{{anime.anime.finished_airing}}
 				</div>
 				<a class="button button-block button-clear button-assertive ink" href="https://youtu.be/2l4u3FEBwPs" target="_blank">watch trailer</a>
 			</div>
@@ -120,7 +121,7 @@
     <!-- Modal content area -->
     <ion-content>
 
-    <img src="https://static.hummingbird.me/anime/poster_images/000/008/646/large/Duyhhtw.jpg?1426772654" height="553" width="376" class="coverimageopen" style="margin-top: 15px;">
+    <img src="{{anime.anime.cover_image}}" height="553" width="376" class="coverimageopen" style="margin-top: 15px;">
 
     </ion-content>
 

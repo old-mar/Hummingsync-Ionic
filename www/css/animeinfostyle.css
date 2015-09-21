@@ -49,23 +49,30 @@
 	width: 98px;
 	width: 107.8px;
 	margin-left: 20px;
-	margin-top: 60px;
+	margin-top: 150px;
 }
 
 .detailtitle {
-	margin-top: -96px;
+	margin-top: -116px;
 	padding-top: 30px;
+	padding-right: 10px;
+	margin-bottom: 24px;
 	height: 100px;
 	font-size: 24px;
 	color: white;
-	padding-left: 150px;
+	padding-left: 140px;
 	background-color: #455A64;
+	line-height: 110%;
 }
 .detailalternativetitle {
-	margin-left: 150px;
-	margin-top: -48px;
-	padding-bottom: 40px;
+	position: relative;
+	/*left: 150px;*/
+	top: 0px;
+/*	margin-left: 150px;
+	margin-top: -48px;*/
+	/*padding-bottom: 40px;*/
 	color: #D3D3D3;
+	font-size: 14px;
 	opacity: 0.6;
 }
 .cardsubtitle {
