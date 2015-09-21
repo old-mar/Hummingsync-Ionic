@@ -31,6 +31,7 @@ angular.module('starter', ['ionic', 'ionic-material'])
 
     DbService.refresh();
 
+
   });
 })
 
@@ -38,13 +39,17 @@ angular.module('starter', ['ionic', 'ionic-material'])
 			$compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|file|blob|content):|data:image\//);
 	}])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
 	// Ionic uses AngularUI Router which uses the concept of states
 	// Learn more here: https://github.com/angular-ui/ui-router
 	// Set up the various states which the app can be in.
 	// Each state's controller can be found in controllers.js
 
+
+	// $ionicConfigProvider.views.maxCache(0);
+
+	
 	// if none of the below states are matched, use this as the fallback
 	$urlRouterProvider.otherwise('/app/animelist');
 
@@ -83,8 +88,14 @@ angular.module('starter', ['ionic', 'ionic-material'])
 	})
 
 	.state('app.animeinfo', {
-	  url: '/animelist/animeinfo/{animeId}',
+	  url: '/animelist/{animeId}',
 	  templateUrl: 'animeinfo/animeinfo.html',
+	  controller: 'AnimeInfoCtrl'
+	})
+
+	.state('app.animeedit', {
+	  url: '/animelist/{animeId}/edit',
+	  templateUrl: 'animeinfo/animeedit.html',
 	  controller: 'AnimeInfoCtrl'
 	})
 

@@ -1,5 +1,5 @@
 .bar-energized-900 {
-	background-color: none !important;
+	background-color: #455A64 !important;
 	background: transparent !important;
 	border: none !important;
 	border-style: none !important;
@@ -35,8 +35,9 @@
 
 /*Anime Detail page*/
 .animedetailcontent {
-	margin-top: -130px;
+	margin-top: -50px;
 	background-color: #455A64;
+	padding-bottom: 10px;
 }
 .coverimagemax {
 	margin-top: -44px;
@@ -49,7 +50,7 @@
 	width: 98px;
 	width: 107.8px;
 	margin-left: 20px;
-	margin-top: 150px;
+	margin-top: 60px;
 }
 
 .detailtitle {

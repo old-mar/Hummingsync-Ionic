@@ -9,4 +9,6 @@ angular.module('starter')
     selectedAnimeId: selectedAnimeId
   };
 
+  var auth_token = undefined;
+
 });

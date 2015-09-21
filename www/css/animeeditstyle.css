@@ -1,0 +1,103 @@
+.bar-energized-900{
+	background-color: #455A64 !important;
+	/*background: transparent !important;*/
+	border: none !important;
+	border-style: none !important;
+	box-shadow: none;
+}
+.button.button-clear.icon.ion-android-more-vertical {
+	color: #B6B6B6;
+	visibility: visible;
+}
+.button.button-clear.icon.ion-android-refresh {
+	color: #B6B6B6;
+}
+.ion-android-arrow-back{
+	color: #B6B6B6;
+	position: relative;
+}
+/*.button-block {
+	margin-bottom: 4px !important;
+	margin-left: 4px;
+	width: 345px !important	;
+}*/
+.watchednumber {
+	margin-left: 10px !important;
+
+}
+.item.item-input{
+	width: 300px !important;
+	margin-right: 0px !important;
+	/*padding-right: 0px !important;*/
+}
+.episodecount {
+	left: -100px !important;
+}
+.title {
+	position: absolute;
+	left: 50px !important;
+	text-align: center;
+	/*left: -10px !important; */
+	opacity: 1 !important;
+	width: 100px;
+}
+
+/*Anime Detail page*/
+.animedetailcontent {
+	margin-top: -50px;
+	background-color: #455A64;
+	padding-bottom: 10px;
+}
+
+.cardsubtitle {
+	margin-left: 16px;
+	margin-top: 0px;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 10px;
+	color: #414141;
+	padding-top: 4px;
+}
+.cardsubtitleright {
+	margin-left: 197px !important;
+	margin-top: -44px;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 10px;
+	color: #414141;
+	padding-top: 4px;
+}
+.cardsubdetail {
+	margin-left: 26px;
+}
+.cardsubdetailright {
+	margin-left: 207px !important;
+	margin-top: 0px;
+
+}
+/*.button-assertive {
+	opacity: 1;
+}*/
+ion-content {
+	margin-top: 20px !important;
+}
+.notesarea {
+	margin-left: 26px !important;
+	border: solid;
+	border-width: 1px;
+	border-color: #455A64;
+	width: 300px;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+.modal
+/*Hiding the Back button*/
+/*.button.back-button.buttons.button-clear.header-item {
+	visibility: hidden;
+	opacity: 0;
+}*/
+.ion-android-menu {
+	visibility: hidden;
+	position: relative;
+	left: -54px;
+}

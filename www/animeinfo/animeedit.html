@@ -1,0 +1,78 @@
+<ion-view title="Edit Entry">
+<link href="css/animeeditstyle.css" rel="stylesheet"></link>
+  <div class="modal">
+
+    <!-- Modal header bar -->
+    <!-- <ion-header-bar class="bar-dark">
+      <button class="button button-icon button-clear icon ion-android-arrow-back" ng-click="closeAnimeEdit()"></button>
+      <h1 class="title">Edit Library Entry</h1>
+    
+    </ion-header-bar>
+ -->
+    <!-- Modal content area -->
+    <ion-content>
+
+      <form ng-submit="createTask()">
+        <div class="cardsubtitle">
+          Status
+        </div>
+        <div class="input-field col s12">
+          <select>
+            <option value="1">Currently Watching</option>
+            <option> Plan to Watch</option>
+            <option>Completed</option>
+            <option>On Hold</option>
+            <option>Dropped</option>
+            <option>Remove from list</option>
+          </select>
+          <!-- <label>Status</label> -->
+        </div>
+      <!-- <label class="item item-input item-select">
+        <select>
+          <option selected>Currently Watching</option>
+          <option>Plan to Watch</option>
+          <option>Completed</option>
+          <option>On Hold</option>
+          <option>Dropped</option>
+          <option>Remove from list</option>
+        </select>
+      </label> -->
+        <div class="cardsubtitle">
+          Watched
+        </div>
+      <div class="watchednumber">
+        <label class="item item-input">
+          <input class="watchednumberinput" type="number" value="{{anime.episodes_watched}}"> 
+        </label>
+        <div class="episodecount">
+           / {{anime.anime.episode_count}} 
+          </div>
+      </div>
+
+      Rating: 8.14{{anime.rating.value*2}}
+      
+      <div class="item item-checkbox">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="anime.private">
+        </label>
+        Private
+      </div>
+      <div class="item item-checkbox">
+        <label class="checkbox" ng-model="anime.rewatching">
+          <input type="checkbox">
+        </label>
+        Rewatching
+      </div>
+      <div class="cardsubtitle">
+      Notes
+      </div>
+      <textarea class="notesarea" placeholder="Notes"></textarea>
+      <button class="button button-balanced button-fab button-fab-bottom-right icon ion-android-done ink-dark" ng-click=""></button>
+      
+      </form>
+      
+    </ion-content>
+
+  </div>
+
+</ion-view>
