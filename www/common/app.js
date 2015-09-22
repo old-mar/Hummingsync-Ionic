@@ -143,6 +143,20 @@ angular.module('starter', ['ionic', 'ionic-material'])
 
 });
 
+document.addEventListener("deviceready", function onDeviceReady(w) {
+    // Should work on Andriod
+    if(StatusBar && statusbarTransparent) {
+        // Enable translucent statusbar
+        statusbarTransparent.enable();
 
+        // Get the bar back
+        StatusBar.show();
+    }
+    // iOS only
+    else if (StatusBar) {
+        // Get the bar back
+        StatusBar.show();
+    }
+}, false);
 
 

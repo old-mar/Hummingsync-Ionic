@@ -2,21 +2,21 @@
 
  	<link href="css/animeinfostyle.css" rel="stylesheet"></link>
 	<ion-content>
-		<!-- <img src="https://static.hummingbird.me/anime/cover_images/000/008/646/thumb/851886b3a3.jpg?1421335818" class="coverimagemax"> -->
-		<div class="animedetailcontent">
-			<a ng-click="openImage()">
-				<img src="{{anime.anime.cover_image}}" height="142" width="98" class="coverimagelarge">
-			</a>
-			<br>
-			<div class="detailtitle">
-				{{anime.anime.title}}
-				<div class="detailalternativetitle">
-				{{anime.anime.alternate_title}}
+		<div class="parallax-container">
+      		<div class="parallax">
+      			<img src="{{anime.anime.cover_image}}">
+      		</div>
+      		<span class="detailtitle">
+	            {{anime.anime.title}}
+	            <div class="detailalternativetitle">
+					{{anime.anime.alternate_title}}
 				</div>
-			</div>
+	        </span>
+    	</div>
+		<!-- <img src="{{anime.anime.cover_image}}" class="coverimagemax" ng-click="openImage()"> -->
+		<div class="animedetailcontent">
 			
-			<div class="list">
-				<div class="card">
+			<div class="card">
 				<br>
 				<div class="cardsubtitle">
 					Status
@@ -45,8 +45,11 @@
 				<div class="cardsubdetailright">
 					{{anime.rewatched_times}}
 				</div>
-			<button class="button button-block button-clear button-assertive ink-dark" ng-click="openAnimeEdit(animeId)">edit entry</button>
-			</div>
+				<div class="card-action">
+	              <button class="button button-block button-clear button-assertive ink-dark editentry" ng-click="openAnimeEdit(animeId)">edit entry</button>
+	            </div>
+            </div>
+
 			<div class="card">
 				<div class="cardsubtitle synopsistitle">
 					Synopsis
@@ -107,24 +110,53 @@
 	</ion-content>
 </ion-view>
 
-<script id="openimage.html" type="text/ng-template">
+<!-- <div class="row">
+	        <div class="col s12 m7">
+	          <div class="card">
+	            <div class="card-image">
+					<img class="responsive-img" src="{{anime.anime.cover_image}}">
+	              <span class="card-title">
+	              	{{anime.anime.title}}
+	              	<div class="detailalternativetitle">
+					{{anime.anime.alternate_title}}
+					</div>
+	              </span>
+	              
+	            </div>
+	            <div class="card-content">
+					<br>
+					<div class="maincardsubtitle">
+						Status
+					</div>
+					<div class="maincardsubdetail">
+						Currently Watching
+					</div>
+					<div class="maincardsubtitleright">
+						Watched
+					</div>
+					<div class="maincardsubdetailright">
+						{{anime.episodes_watched}} / {{anime.anime.episode_count}}
+					</div>
+					<div class="add-episode-button">
+					<button class="button button-clear button-assertive ink" style="font-size: 16px;">+1</button>
+					</div>
+					<div class="maincardsubtitle">
+						Rating
+					</div>
+					<div class="maincardsubdetail">
+						{{anime.rating.value*2}} / 10
+					</div>
+					<div class="maincardsubtitleright">
+						Rewatched Count
+					</div>
+					<div class="maincardsubdetailright">
+						{{anime.rewatched_times}}
+					</div>
+	            </div>
+	            <div class="card-action">
+	              <button class="button button-block button-clear button-assertive ink-dark editentry" ng-click="openAnimeEdit(animeId)">edit entry</button>
+	            </div>
+	          </div>
+	        </div>
+    	</div> -->
 
-  <div class="modal" style="background-color: black;">
-
-    <!-- Modal header bar -->
-    <ion-header-bar class="bar-dark" style="background: transparent !important;	box-shadow: none;">
-      <button class="button button-icon button-clear icon ion-android-close" ng-click="closeImage()" style="color: gray; top: 5px; left: 5px; font-size: 1px !important; height: 1px !important;"></button>
-      <h1 class="title">Poster Image</h1>
-    
-    </ion-header-bar>
-
-    <!-- Modal content area -->
-    <ion-content>
-
-    <img src="{{anime.anime.cover_image}}" height="553" width="376" class="coverimageopen" style="margin-top: 15px;">
-
-    </ion-content>
-
-  </div>
-
-</script>

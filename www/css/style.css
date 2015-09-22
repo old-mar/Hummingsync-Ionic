@@ -9,11 +9,16 @@
 .title {
 	padding-top: 7px;
 	opacity: 1;
+	position: absolute;
+	left: 54px !important;
 }
 .ion-android-menu:before {
 	font-size: 24px !important;
 	margin-left: 16px;
 	margin-top: 12px;
+}
+.ink-ripple {
+	opacity: 0.2 !important;
 }
 .button.button-clear.icon.ion-android-more-vertical {
 	font-size: 10px;

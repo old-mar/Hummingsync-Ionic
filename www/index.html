@@ -7,10 +7,9 @@
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="lib/ionic-material/dist/ionic.material.min.css" rel="stylesheet">
-    
     <link href="https://fonts.googleapis.com/%0A%20%20%20%20css?family=RobotoDraft%3A400%2C500%2C700%2C400italic" rel="stylesheet" type="text/css">
-    <!-- <link href="http://fonts.googleapis.com/icon?family=Material%20Icons" rel="stylesheet"> -->
-    <!-- <link type="text/css" rel="stylesheet" href="lib/materialize/dist/css/materialize.min.css" media="screen,projection"> -->
+    <link href="http://fonts.googleapis.com/icon?family=Material%20Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="lib/materialize/dist/css/materialize.min.css" media="screen,projection">
     <link href="css/style.css" rel="stylesheet">
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -46,9 +45,23 @@
     <ion-nav-view> </ion-nav-view>
   </body>
 
-<script id="editanime.html" type="text/ng-template">
+<script id="openimage.html" type="text/ng-template">
+<ion-modal-view>
+  <div class="modal" style="background-color: black;">
 
-  
+    <!-- Modal header bar -->
+    <ion-header-bar class="bar-dark" style="background: transparent !important; box-shadow: none;">
+      <button class="button button-icon button-clear icon ion-android-close" ng-click="closeImage()" style="color: gray; top: 5px; left: 5px; font-size: 1px !important; height: 1px !important;"></button>
+    </ion-header-bar>
 
+    <!-- Modal content area -->
+    <ion-content>
+
+    <img src="{{anime.anime.cover_image}}" height="553" width="376" class="coverimageopen" style="margin-top: 15px;">
+
+    </ion-content>
+
+  </div>
+</ion-modal-view>
 </script>
 </html>

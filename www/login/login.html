@@ -5,14 +5,25 @@
 		<img src="img/fatesnubw.jpg" alt="backgroundimage" class="backgroundimage">
 		<p class="hummingsync">Hummingsync</p>
 		<form ng-submit="submitLogin()">
-
-			<label class="item item-input username">
+			<div class="row">
+        <div class="input-field col s6 username">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate" name="username" style="color: white !important;">
+          <label for="icon_prefix">Username</label>
+        </div>
+        <div class="input-field col s6 password">
+          <i class="material-icons prefix">vpn_key</i>
+          <input id="icon_password" type="password" class="validate" name="password" style="color: white !important;">
+          <label for="icon_password">Password</label>
+        </div>
+      </div>
+			<!-- <label class="item item-input username">
 			<input type="text" align="middle" placeholder="Username">
 			</label>
 			<br>
 			<label class="item item-input password">
 			<input type="password" placeholder="Password">
-			</label>
+			</label> -->
 			<button class="button button-raised button-assertive ink login-button" ng-click="goToAnime()">log in</button>
 		</form>
 

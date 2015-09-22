@@ -1,6 +1,6 @@
 <ion-view title="Edit Entry">
 <link href="css/animeeditstyle.css" rel="stylesheet"></link>
-  <div class="modal">
+  <!-- <div class="modal"> -->
 
     <!-- Modal header bar -->
     <!-- <ion-header-bar class="bar-dark">
@@ -12,31 +12,75 @@
     <!-- Modal content area -->
     <ion-content>
 
-      <form ng-submit="createTask()">
+      <form action="#">
+      <!-- <div class="input-field col s12">
+            <select>
+              <option value="1">Currently Watching</option>
+              <option value="2"> Plan to Watch</option>
+              <option value="3">Completed</option>
+              <option value="4">On Hold</option>
+              <option value="5">Dropped</option>
+              <option value="6">Remove from list</option>
+            </select>
+          </div> -->
+          <p>
+          <input name="group1" type="radio" id="test1" value="" />
+          <label for="test1" style="color: black;">Currently Watching</label>
+        </p>
+        <p>
+          <input name="group1" type="radio" id="test2" />
+          <label for="test2" style="color: black;">Plan to Watch</label>
+        </p>
+        <p>
+          <input name="group1" type="radio" id="test3" />
+          <label for="test3" style="color: black;">Completed</label>
+        </p>
+        <p>
+          <input name="group1" type="radio" id="test4" />
+          <label for="test4" style="color: black;">On Hold</label>
+        </p>
+        <p>
+          <input name="group1" type="radio" id="test5" />
+          <label for="test5" style="color: black;">Dropped</label>
+        </p>
+          <p class="range-field">
+            <i class="material-icons prefix">star_rate</i>
+          <input type="range" id="test6" min="0" max="10" value="rating" style="padding-left: 20px; padding-right: 20px" />
+        </p>
+        <label value="test6"></label>
+          <div class="switch">
+          Private
+          <label>
+            Off
+            <input type="checkbox">
+            <span class="lever"></span>
+            On
+          </label>
+      </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <!-- <i class="material-icons prefix">mode_edit</i> -->
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Notes</label>
+            </div>
+          </div>
+    </form>
+
+      <!-- <form ng-submit="createTask()">
         <div class="cardsubtitle">
           Status
         </div>
         <div class="input-field col s12">
           <select>
             <option value="1">Currently Watching</option>
-            <option> Plan to Watch</option>
-            <option>Completed</option>
-            <option>On Hold</option>
-            <option>Dropped</option>
-            <option>Remove from list</option>
+            <option value="2"> Plan to Watch</option>
+            <option value="3">Completed</option>
+            <option value="4">On Hold</option>
+            <option value="5">Dropped</option>
+            <option value="6">Remove from list</option>
           </select>
-          <!-- <label>Status</label> -->
         </div>
-      <!-- <label class="item item-input item-select">
-        <select>
-          <option selected>Currently Watching</option>
-          <option>Plan to Watch</option>
-          <option>Completed</option>
-          <option>On Hold</option>
-          <option>Dropped</option>
-          <option>Remove from list</option>
-        </select>
-      </label> -->
+      </label>
         <div class="cardsubtitle">
           Watched
         </div>
@@ -63,16 +107,23 @@
         </label>
         Rewatching
       </div>
-      <div class="cardsubtitle">
-      Notes
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">mode_edit</i>
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Notes</label>
+            </div>
+          </div>
+        </form>
       </div>
-      <textarea class="notesarea" placeholder="Notes"></textarea>
       <button class="button button-balanced button-fab button-fab-bottom-right icon ion-android-done ink-dark" ng-click=""></button>
       
-      </form>
+      </form> -->
       
     </ion-content>
 
-  </div>
+  <!-- </div> -->
 
 </ion-view>

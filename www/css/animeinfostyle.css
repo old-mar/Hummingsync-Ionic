@@ -6,20 +6,24 @@
 	box-shadow: none;
 }
 .button.button-clear.icon.ion-android-more-vertical {
-	color: #B6B6B6;
+	color: white;
 	visibility: visible;
 }
 .button.button-clear.icon.ion-android-refresh {
 	color: #B6B6B6;
 }
 .ion-android-arrow-back {
-	color: #B6B6B6;
+	color: white;
 	margin-left: 5px;
 }
 .button-block {
 	margin-bottom: 4px !important;
 	margin-left: 4px;
 	width: 345px !important	;
+}
+.parallax-container {
+	margin-top: -44px !important;
+	height: 500px;
 }
 .watchednumberinput {
 	width: 30px;
@@ -34,6 +38,9 @@
 }
 
 /*Anime Detail page*/
+.scroll-content {
+	/*background-color: #455A64;*/
+}
 .animedetailcontent {
 	margin-top: -50px;
 	background-color: #455A64;
@@ -41,7 +48,9 @@
 }
 .coverimagemax {
 	margin-top: -44px;
-	height: 250px;
+	max-width: 100%;
+	height: auto;
+	/*width: auto\9;*/
 
 }
 .coverimagelarge {
@@ -54,28 +63,60 @@
 }
 
 .detailtitle {
-	margin-top: -116px;
-	padding-top: 30px;
-	padding-right: 10px;
-	margin-bottom: 24px;
+	position: relative;
+	top: 286px !important;
+	left: 34px;
 	height: 100px;
 	font-size: 24px;
 	color: white;
-	padding-left: 140px;
-	background-color: #455A64;
+	/*padding-left: 140px;*/
+	/*background-color: #455A64;*/
 	line-height: 110%;
+	max-width: 100%;
+	height: auto;
+	font-family: 'Roboto-Light', 'Roboto';
 }
 .detailalternativetitle {
 	position: relative;
-	/*left: 150px;*/
-	top: 0px;
-/*	margin-left: 150px;
-	margin-top: -48px;*/
-	/*padding-bottom: 40px;*/
-	color: #D3D3D3;
+	top: 10px;
+	/*font-weight: bold;*/
+	color: #E3E3E3;
 	font-size: 14px;
 	opacity: 0.6;
+	padding-top: 2px;
+	/*height: 4px;*/
+	line-height: 110%;
+	padding-bottom: 10px;
 }
+
+/*mains*/
+.maincardsubtitle {
+	margin-left: 0px;
+	margin-top: 0px;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 10px;
+	color: #414141;
+	padding-top: 4px;
+}
+.maincardsubtitleright {
+	margin-left: 167px !important;
+	margin-top: -44px;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 10px;
+	color: #414141;
+	padding-top: 4px;
+}
+.maincardsubdetail {
+	margin-left: 10px;
+}
+.maincardsubdetailright {
+	margin-left: 177px !important;
+	margin-top: 0px;
+}
+/*sides*/
+
 .cardsubtitle {
 	margin-left: 16px;
 	margin-top: 0px;
@@ -105,13 +146,33 @@
 .add-episode-button {
 	opacity: 1;
 	margin-top: -34px !important;
-	margin-left: 270px !important;
+	margin-left: 260px !important;
 }
 .button-assertive {
 	opacity: 1;
 }
 .card {
-	width: 356px;
+	position: relative;
+	top: -100px;
+	max-width: 100%;
+	width: auto;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.card-title {
+	line-height: 120%;
+}
+.card-content {
+	margin-top: -20px;
+	margin-bottom: 4px;
+}
+.card-action {
+	height: 50px;
+	margin-top: 20px;
+}
+.editentry {
+	top: -30px;
+	left: -15px;
 }
 .synopsistitle {
 	text-align: center;
@@ -125,8 +186,17 @@
 	padding-bottom: 10px;
 	text-align: center;
 }
-
-/*Hiding the Back button*/
+.button-fab {
+	position: relative;
+	top: 360px !important;
+}
+.col.s12.m7 {
+	margin-left: -16px;
+	margin-right: -20px;
+	margin-top: -18px;
+	margin-bottom: -30px;
+}
+/*Hiding the Back button
 /*.button.back-button.buttons.button-clear.header-item {
 	visibility: hidden;
 	opacity: 0;

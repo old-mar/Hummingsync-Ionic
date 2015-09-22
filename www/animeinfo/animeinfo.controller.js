@@ -1,11 +1,21 @@
 angular.module('starter')
 .controller('AnimeInfoCtrl', function($scope, $ionicSideMenuDelegate, $state, $stateParams, $ionicModal, ionicMaterialInk, ionicMaterialMotion, Animes, DbService) {
-  $ionicSideMenuDelegate.canDragContent(false);
+  // $ionicSideMenuDelegate.canDragContent(false);
   $stateParams.animeId == undefined;
   ionicMaterialInk.displayEffect();
-  // $(document).ready(function() {
-  //   $('select').material_select();
-  // });
+
+   $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+
+   $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+
+  var options = [
+    {selector: '#image-test', offset: 500, callback: 'Materialize.fadeInImage("{{anime.anime.poster_image}}")' }
+  ];
+  Materialize.scrollFire(options);
   // $scope.anime = DbService.get($stateParams.animeId);
   // console.log($stateParams.animeId);
 
@@ -29,9 +39,6 @@ angular.module('starter')
 
   $scope.openAnimeEdit = function(animeId) {
   	$state.go('app.animeedit')
-  };
-  $scope.closeAnimeEdit = function() {
-  	$scope.editModal.hide();
   };
 
   $scope.openImage = function() {

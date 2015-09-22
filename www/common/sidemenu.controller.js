@@ -1,6 +1,6 @@
 angular.module('starter')
 .controller('SideMenuCtrl', function($scope, $state, $location) {
-
+  $(".button-collapse").sideNav();
   $scope.goToDebug = function() {
   	$state.go('app.debug', {reload: true});
   };

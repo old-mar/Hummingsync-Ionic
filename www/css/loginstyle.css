@@ -7,17 +7,28 @@
 }
 .username {
 	/*margin-top: -500px;*/
-	margin-left: 56px;
+	/*margin-left: 56px;*/
 	width: 260px;
-	background-color: white;
+	top: -25px;
+	left: 89px;
+	/*background-color: white;*/
 	text-align: center;
+	color: white;
+	/*padding-top: 10px !important;*/
 }
 .password {
-	background-color: white;
-	margin-left: 56px;
+	/*background-color: white;*/
+	position: relative;
+	top: 50px;
+	left: -93px;
+	/*margin-left: 56px;*/
 	width: 260px;
+	color: white;
 }
-
+.prefix {
+	left: 6px;
+	top: 8px;
+}
 .backgroundimage {
 	margin-top: -56px;
 	height: 676px;
@@ -31,7 +42,7 @@
 }
 .login-button {
 	opacity: 1;
-	margin-top: 20px;
+	margin-top: 50px;
 	margin-left: 130px;
 }
 .hummingsync {

@@ -2,6 +2,12 @@ angular.module('starter')
 .controller('AnimeCtrl', function($scope, $state, $http, $ionicSideMenuDelegate,  DebugService, ionicMaterialInk, ionicMaterialMotion, Animes, DbService, filterFilter) {
   ionicMaterialInk.displayEffect();
   ionicMaterialMotion.blinds();
+   $(document).ready(function() {
+    $('select').material_select();
+  });
+   $(document).ready(function(){
+      $('.parallax').parallax();
+    });
   $ionicSideMenuDelegate.canDragContent(true);
   $scope.animelist = Animes.animelist;
   $scope.refresh = function() {
