@@ -2,13 +2,14 @@
 
  	<link href="css/profilestyle.css" rel="stylesheet"></link>
 	<ion-content has-bouncing="false">
-		<img src="https://static.hummingbird.me/anime/cover_images/000/008/646/thumb/851886b3a3.jpg?1421335818" alt="backgroundimage" class="backgroundimage">
-		<p class="userheader">Anonymous</p>
+		<img src="{{details.cover_image}}" alt="backgroundimage" class="backgroundimage">
+		<p class="userheader">{{details.name}}</p>
 		<a class="item-avatar">
-			<img class="avatarimage" src="http://isigned.org/images/anonymous.png">
+			<img class="avatarimage" src="{{details.avatar}}">
 		</a>
 		<div class="aboutheader">
 			About
+			{{details.bio}}
 		</div>
 
 		

@@ -29,7 +29,7 @@ angular.module('starter', ['ionic', 'ionic-material'])
     	});
     });
 
-    DbService.refresh();
+    // DbService.refresh();
 
 
   });
@@ -51,7 +51,7 @@ angular.module('starter', ['ionic', 'ionic-material'])
 
 	
 	// if none of the below states are matched, use this as the fallback
-	$urlRouterProvider.otherwise('/app/animelist');
+	$urlRouterProvider.otherwise('/app/login');
 
 	$stateProvider
 	// setup an abstract state for the tabs directive

@@ -10,6 +10,7 @@
 }
 .backgroundimage {
 	height: 211px;
+	width: auto;
 	margin-top: -44px;
 }
 .userheader {

@@ -5,6 +5,7 @@
 	background-color: #FF5722 !important;
 	background-color: #455A64 !important;
 	box-shadow: 10px;
+	display: inline;
 }
 .title {
 	padding-top: 5px;
@@ -16,6 +17,7 @@
 	font-size: 24px !important;
 	margin-left: 16px;
 	margin-top: 12px;
+	display: r
 }
 .ink-ripple {
 	opacity: 0.2 !important;

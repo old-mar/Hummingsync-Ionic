@@ -18,10 +18,10 @@
 	font-size: 24px !important;
 	margin-left: 16px;
 	margin-top: 12px;
-	visibility: hidden;
+	visibility: visible;
 }
 .ink-ripple {
-	opacity: 0.2 !important;
+	opacity: 1 !important;
 }
 .query {
 	position: relative;

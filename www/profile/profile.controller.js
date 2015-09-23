@@ -5,6 +5,8 @@ angular.module('starter')
    $(document).ready(function() {
     $('select').material_select();
   });
+   $scope.details = Animes.profiledetails;
+   
 
   $scope.goToAnime = function() {
     $state.go('app.animelist');

@@ -84,7 +84,7 @@ angular.module('starter')
 
   function refresh() {
     Animes.animelist.length = 0;
-    $http.get('https://hummingbird.me/api/v1/users/cyalins/library').then(function(res) {
+    $http.get('https://hummingbird.me/api/v1/users/'+ Animes.username + '/library').then(function(res) {
         console.log('data length: ' + res.data.length);
         console.log('pre-length: ' + Animes.animelist.length);
         for(var i = 0; i < res.data.length; i++) {

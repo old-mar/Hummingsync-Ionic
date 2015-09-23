@@ -13,6 +13,7 @@ angular.module('starter')
     selectedAnime: selectedAnime
   };
 
+  var username = undefined;
   var auth_token = undefined;
 
 
