@@ -105,7 +105,7 @@ angular.module('starter')
     
   };
 
-  return {
+  var o = {
     initDB: initDB,
     get: get,
     getAll: getAll,
@@ -116,5 +116,7 @@ angular.module('starter')
     destroy: destroy,
     refresh: refresh
   };
+
+  return o;
 
 });

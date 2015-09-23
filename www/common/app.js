@@ -99,6 +99,12 @@ angular.module('starter', ['ionic', 'ionic-material'])
 	  controller: 'AnimeInfoCtrl'
 	})
 
+	.state('app.search', {
+	  url: '/search',
+	  templateUrl: 'search/search.html',
+	  controller: 'SearchCtrl'
+	})
+
 	.state('app.debug', {
 		url: '/debug',
 		templateUrl: 'debug/debug.html',
@@ -144,7 +150,7 @@ angular.module('starter', ['ionic', 'ionic-material'])
 });
 
 document.addEventListener("deviceready", function onDeviceReady(w) {
-    // Should work on Andriod
+    // Should work on Android
     if(StatusBar && statusbarTransparent) {
         // Enable translucent statusbar
         statusbarTransparent.enable();

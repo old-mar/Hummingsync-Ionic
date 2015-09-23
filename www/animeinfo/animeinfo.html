@@ -4,16 +4,15 @@
 	<ion-content>
 		<div class="parallax-container">
       		<div class="parallax">
-      			<img src="{{anime.anime.cover_image}}">
+      			<img src="{{fullanime.cover_image}}" ng-click="openImage()">
       		</div>
       		<span class="detailtitle">
-	            {{anime.anime.title}}
+	            {{fullanime.title}}
 	            <div class="detailalternativetitle">
 					{{anime.anime.alternate_title}}
 				</div>
 	        </span>
     	</div>
-		<!-- <img src="{{anime.anime.cover_image}}" class="coverimagemax" ng-click="openImage()"> -->
 		<div class="animedetailcontent">
 			
 			<div class="card">
@@ -22,7 +21,7 @@
 					Status
 				</div>
 				<div class="cardsubdetail">
-					Currently Watching
+					{{anime.status}}
 				</div>
 				<div class="cardsubtitleright">
 					Watched

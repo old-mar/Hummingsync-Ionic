@@ -15,6 +15,7 @@
 .ion-android-arrow-back {
 	color: white;
 	margin-left: 5px;
+	visibility: visible;
 }
 .button-block {
 	margin-bottom: 4px !important;

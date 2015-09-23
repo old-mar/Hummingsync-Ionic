@@ -30,14 +30,37 @@ angular.module('starter')
 	  });
 	};
 
-  $scope.openSelectedAnime = function(animeId) {
+  $scope.openSelectedAnime = function(animeId,animelibId) {
   		Animes.selectedAnime = filterFilter(Animes.animelist, {id: animeId});
-  		// Animes.selectedAnimeFull = $http.get('https://hummingbird.me/full_anime/{{Animes.selectedAnime[0].anime.id}}');
-  		console.log(animeId);
+  		$http({
+        method: 'GET',
+        url: 'https://hbrd-v1.p.mashape.com/anime/' + animelibId,
+        headers: {
+          'X-Mashape-Key': 'WYIjQHHS7pmshGy6W5vPf63xlY1up1bePRvjsn3K7AoVDYwltl',
+          'Accept': 'application/json',
+        }
+      }).success(function(response){
+        Animes.selectedAnimeFull = response;
+        console.log("Retrieved full anime details.");
+        console.log(response);
+      }).error(function(response){
+        console.log("Unable to retrieve full anime details.");
+        console.log(response);
+      }).then(function(){
+        $state.go('app.animeinfo', {animeId: animeId});
+      });
+
+      console.log(animeId);
   		console.log(Animes.selectedAnime[0]);
   		// console.log(Animes.selectedAnimeFull);
-  		$state.go('app.animeinfo', {animeId: animeId});
+  		
+  };
+
+  $scope.openSearch = function() {
+    $state.go('app.search');
   }
+
+
   // document.getElementById('button-fab').classList.toggleClass('spiral-back');
 });
 // .controller('AnimeInfoCtrl', function($scope) {

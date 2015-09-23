@@ -20,7 +20,7 @@ angular.module('starter')
   // console.log($stateParams.animeId);
 
   $scope.anime = Animes.selectedAnime[0];
-  $scope.fullanime = Animes.selectedAnime[0].anime.id;
+  $scope.fullanime = Animes.selectedAnimeFull;
 
   //editor
   // $ionicModal.fromTemplateUrl('animeinfo/animeedit.html', function(modal) {
@@ -47,4 +47,9 @@ angular.module('starter')
   $scope.closeImage = function() {
     $scope.imageModal.hide();
   };
+
+  $scope.editClicked = function() {
+    Animes.authenticate();
+  }
+
 });

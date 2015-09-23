@@ -1,14 +1,29 @@
 angular.module('starter')
 .factory('Animes', function() {
-  
+
+
   var animelist = [];
 
   var selectedAnime = undefined;
+  var selectedAnimeFull = undefined;
+  var searchresults = [];
   return {
     animelist: animelist,
-    selectedAnimeId: selectedAnimeId
+    searchresults: searchresults,
+    selectedAnime: selectedAnime
   };
 
   var auth_token = undefined;
+
+
+  // function foo() {
+  //   authenticate();
+  // }
+
+  // function authenticate() {
+  // 	$http()
+  // };
+
+
 
 });
