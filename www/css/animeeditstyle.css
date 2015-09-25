@@ -3,18 +3,40 @@
 	/*background: transparent !important;*/
 	border: none !important;
 	border-style: none !important;
-	box-shadow: none;
+	height: 81px;
 }
-.button.button-clear.icon.ion-android-more-vertical {
-	color: #B6B6B6;
+.ion-android-menu {
+	visibility: hidden;
+	position: relative;
+	left: -54px;
+}
+.button.button-clear.icon.ion-android-more-vertical:before {
+	font-size: 24px;
+	color: white;
 	visibility: visible;
 }
 .button.button-clear.icon.ion-android-refresh {
 	color: #B6B6B6;
 }
-.ion-android-arrow-back{
-	color: #B6B6B6;
+.button.button-clear.icon.ion-android-funnel.ink {
+	visibility: hidden;
+}
+.right-buttons {
 	position: relative;
+	top: 30px;
+	visibility: visible;
+}
+.back-button {
+	visibility: visible;
+	position: relative;
+	top: 33px;
+	left: 5px;
+}
+.ion-android-arrow-back:before {
+	top: 10px !important;
+	font-size: 24px;
+	color: white;
+	visibility: visible;
 }
 /*.button-block {
 	margin-bottom: 4px !important;
@@ -40,6 +62,7 @@
 	/*left: -10px !important; */
 	opacity: 1 !important;
 	width: 100px;
+	top: 31px !important;
 }
 
 /*Anime Detail page*/
@@ -79,7 +102,7 @@
 	opacity: 1;
 }*/
 ion-content {
-	margin-top: 20px !important;
+	margin-top: 56px !important;
 }
 .notesarea {
 	margin-left: 26px !important;
@@ -90,14 +113,89 @@ ion-content {
 	padding-left: 10px;
 	padding-top: 10px;
 }
-.modal
-/*Hiding the Back button*/
-/*.button.back-button.buttons.button-clear.header-item {
-	visibility: hidden;
-	opacity: 0;
-}*/
-.ion-android-menu {
-	visibility: hidden;
+
+/*Entry editing stuff*/
+.privatelabel {
+	font-family: 'Roboto-Light','Roboto';
+	font-size: 20px;
 	position: relative;
-	left: -54px;
+	left: 50px;
+	bottom: 78px;
+}
+.privatelever {
+	position: relative;
+	bottom: 100px;
+	left: 200px;
+}
+.material-icons {
+	position: relative;
+	top: -60px;
+	left: 8px;
+}
+.ratingrange {
+	position: relative;
+	top: -94px;
+	left: 40px !important;
+	padding-right: 50px !important;
+}
+.episodes_watchedwhole {
+	top: 10px;
+	left: 30px;
+}
+.episodes_watched {
+	position: relative;
+	top: 0px;
+	margin-left: 20px !important;
+	max-width: 20%;
+}
+.rewatched_countwhole {
+	top: -72px;
+	left: 170px;
+}
+.rewatched_count {
+	position: relative;
+	top: 0px;
+	margin-left: 20px !important;
+	max-width: 20%;
+}
+.noteswhole {
+	bottom: 90px;
+}
+.button-block {
+	position: relative;
+	top: -110px;
+}
+.toast{
+	position: relative;
+	top: -55px !important;
+	margin-left: 10px;
+	width: auto;
+	margin-right: 10px;
+}
+/*Loading Modal css*/
+.modal {
+	background-color: #454A44;
+	position: relative;
+	top: 200px !important;
+	margin-top: 20px;
+	height: 10px !important;
+	max-height: 10% !important;
+	min-height: 25% !important;
+}
+.modaltext {
+	font-size: 16px;
+	color: white;
+	position: relative;
+	top: 50px;
+	left: 10px !important;
+}
+.popover-wrapper {
+	position: relative;
+	top: 75px;
+	left: 15px !important;
+}
+.preloader-wrapper {
+	position: relative;
+	left: 190px;
+	top: 5px;
 }

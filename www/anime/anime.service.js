@@ -7,15 +7,22 @@ angular.module('starter')
   var selectedAnime = undefined;
   var selectedAnimeFull = undefined;
   var searchresults = [];
-  return {
-    animelist: animelist,
-    searchresults: searchresults,
-    selectedAnime: selectedAnime
-  };
 
   var username = undefined;
   var auth_token = undefined;
 
+  var filter = 'currently-watching';
+  var sort = { order: 'anime.title' };
+
+  return {
+    animelist: animelist,
+    searchresults: searchresults,
+    selectedAnime: selectedAnime,
+    username: username,
+    auth_token: auth_token,
+    filter: filter,
+    sort: sort
+  };
 
   // function foo() {
   //   authenticate();

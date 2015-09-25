@@ -2,7 +2,7 @@
   <ion-side-menus enable-menu-with-back-views="true">
     <!-- MAIN CONTENT -->
     <ion-pane ion-side-menu-content>
-      <ion-nav-bar class="bar-energized-900" hide-on-scroll="true">
+      <ion-nav-bar class="bar-energized-900" hide-on-scroll="true" ng-controller="SideMenuCtrl">
       <ion-nav-title>Hummingbird</ion-nav-title>
         <ion-nav-back-button class="button-clear">
           <i class="ion-android-arrow-back"></i>
@@ -12,7 +12,8 @@
         </ion-nav-buttons>
         <ion-nav-buttons side="right">
           <!-- <a class="button button-clear icon ion-android-refresh ink" href="https://hummingbird.me/api/v1/users/cyalins/library.json" download="library"></a> -->
-          <button class="button button-clear icon ion-android-more-vertical ink"></button>
+          <button class="button button-clear icon ion-android-funnel ink" ng-click="openPopover()"></button>
+          <button class="button button-clear icon ion-android-more-vertical ink" ng-click="openSortByPopover()"></button>
         </ion-nav-buttons>
       </ion-nav-bar>
 
@@ -24,7 +25,7 @@
         <!-- <ion-header-bar class="bar-clear"> 
           <h1 class="title">Lists</h1>
         </ion-header-bar> -->
-        <ion-content class="has-subheader" ng-controller='SideMenuCtrl'>
+        <ion-content overflow-scroll="true" class="has-subheader" ng-controller='SideMenuCtrl'>
           <div class="list">
           <a class="item item-divider">
            Logged in as Username
@@ -54,8 +55,58 @@
            Log Out
           </a>
         </div>
+
+        <script id="templates/popover.html" type="text/ng-template">
+          <ion-popover-view>
+            <ion-content>
+              <div class="list">
+                <a class="item" ng-click="setFilter('currently-watching')">
+                  Currently Watching
+                </a>
+                <a class="item" ng-click="setFilter('plan-to-watch')">
+                  Plan to Watch
+                </a>
+                <a class="item" ng-click="setFilter('completed')">
+                  Completed
+                </a>
+                <a class="item" ng-click="setFilter('on-hold')">
+                  On Hold
+                </a>
+                <a class="item" ng-click="setFilter('dropped')">
+                  Dropped
+                </a>
+              </div>
+            </ion-content>
+          </ion-popover-view>
+        </script>
+
+        <script id="templates/sortbypopover.html" type="text/ng-template">
+          <ion-popover-view>
+            <ion-content>
+              <div class="list">
+                <a class="item" ng-click="setSort('anime.title')">
+                  Sort by name
+                </a>
+                <a class="item" ng-click="setSort('-updated_at')">
+                  Sort by last update
+                </a>
+                <a class="item" ng-click="setSort('-anime.community_rating')">
+                  Sort by community rating
+                </a>
+                <a class="item" ng-click="setSort('-rating.value')">
+                  Sort by personal rating
+                </a>
+                <a class="item" ng-click="setSort('anime.show_type')">
+                  Sort by show type
+                </a>
+              </div>
+            </ion-content>
+          </ion-popover-view>
+        </script>
+
         </ion-content>
       </ion-view>
     </ion-side-menu>
   </ion-side-menus>
 </ion-view>
+

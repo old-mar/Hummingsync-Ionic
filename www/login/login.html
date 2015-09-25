@@ -1,6 +1,6 @@
 <ion-view title="Log In">
 
- 	<link href="css/loginstyle.css" rel="stylesheet"></link>
+ 	<!-- <link href="css/loginstyle.css" rel="stylesheet"></link> -->
 	<ion-content ng-controller="LoginCtrl" has-bouncing="false">
 		<img src="img/fatesnubw.jpg" alt="backgroundimage" class="backgroundimage">
 		<p class="hummingsync">Hummingsync</p>
@@ -26,6 +26,23 @@
 			</label> -->
 			<button class="button button-raised button-assertive ink login-button" ng-click="goToAnime()">log in</button>
 		</form>
+
+		<div id="loadingmodal" class="modal">
+		    <div class="modal-content">
+		      <h4 class="modaltext">Logging in...</h4>
+		       <div class="preloader-wrapper medium active">
+			    <div class="spinner-layer spinner-blue-only">
+			      <div class="circle-clipper left">
+			        <div class="circle"></div>
+			      </div><div class="gap-patch">
+			        <div class="circle"></div>
+			      </div><div class="circle-clipper right">
+			        <div class="circle"></div>
+			      </div>
+			    </div>
+			  </div>
+		    </div>
+		</div>
 
 		<div class="loginerrortitle" ng-show="loginerrorShow">
 		Login Error

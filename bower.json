@@ -5,8 +5,12 @@
     "ionic": "driftyco/ionic-bower#1.1.0"
   },
   "dependencies": {
-    "pouchdb": "~4.0.0",
-    "ionic-material": "~0.4.2"
+    "angular-css": "~1.0.7",
+    "angular-scroll": "~0.7.2",
+    "angular-ui-router-css": "*",
+    "angular-ui-router-styles": "~0.0.6",
+    "ionic-material": "~0.4.2",
+    "pouchdb": "~4.0.0"
   },
   "resolutions": {
     "ionic": "1.1.0",

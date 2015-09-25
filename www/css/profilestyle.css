@@ -5,13 +5,39 @@
 	border-style: none !important;
 	box-shadow: none;
 }
+ion-content {
+	margin-top: -45px !important;
+}
 .title {
 	opacity: 0;
+}
+.left-buttons {
+	visibility: visible;
+	position: relative;
+	top: 33px;
+	left: 5px;
+}
+.ion-android-menu:before {
+	top: 10px !important;
+	font-size: 26px !important;
+	color: white;
+	visibility: visible;
+}
+.right-buttons {
+	position: relative;
+	top: 30px;
+	visibility: visible;
+}
+.button.button-clear.icon.ion-android-more-vertical:before {
+	font-size: 24px;
+	color: white;
+	visibility: visible;
 }
 .backgroundimage {
 	height: 211px;
 	width: auto;
-	margin-top: -44px;
+	margin-top: 0px;
+	background-image: url({{details.cover_image}}) , linear-gradient(to bottom, rgba(200,200,200,0), rgba(10,10,10,0.7)) !important;
 }
 .userheader {
 	margin-top: -42px;
@@ -21,7 +47,7 @@
 }
 
 .avatarimage {
-	margin-top: 20px;
+	margin-top: 60px;
 	margin-left: 130px;
 	max-height: 80px !important;
 	max-width: 80px !important;

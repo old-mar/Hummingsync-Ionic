@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
-    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="lib/ionic-material/dist/ionic.material.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/%0A%20%20%20%20css?family=RobotoDraft%3A400%2C500%2C700%2C400italic" rel="stylesheet" type="text/css">
+    <!-- <link href="https://fonts.googleapis.com/%0A%20%20%20%20css?family=RobotoDraft%3A400%2C500%2C700%2C400italic" rel="stylesheet" type="text/css"> -->
     <link href="http://fonts.googleapis.com/icon?family=Material%20Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="lib/materialize/dist/css/materialize.min.css" media="screen,projection">
+    <link href="lib/materialize/extras/noUiSlider/nouislider.css" rel="stylesheet">
     
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -20,6 +21,8 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
     <script src="lib/pouchdb/dist/pouchdb.min.js"></script>
+    <script src="lib/angular-css/angular-css.js"></script>
+    <script src="lib/angular-scroll/angular-scroll.js"></script>
 
     <!-- your app's js -->
     <script src="common/app.js"></script>
@@ -41,10 +44,31 @@
     <script src="cordova.js"></script>
     
   </head>
-  <body ng-app="starter">
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <body ng-app="starter" ng-class="{&apos;has-translucent-status-bar&apos;: window.screen.height === window.innerHeight}">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="lib/materialize/dist/js/materialize.min.js"></script>
+    <script src="lib/materialize/extras/noUiSlider/nouislider.js"></script>
+
+
     <ion-nav-view> </ion-nav-view>
+
+    <div id="loadingmodal" class="modal">
+            <div class="modal-content">
+              <h4>Downloading data...</h4>
+               <div class="preloader-wrapper big active">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
   </body>
 
 <script id="openimage.html" type="text/ng-template">

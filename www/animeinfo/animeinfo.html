@@ -1,7 +1,7 @@
 <ion-view title="{{anime.anime.title}}">
 
- 	<link href="css/animeinfostyle.css" rel="stylesheet"></link>
-	<ion-content>
+ 	<!-- <link href="css/animeinfostyle.css" rel="stylesheet"></link> -->
+	<ion-content class="ioncontent">
 		<div class="parallax-container">
       		<div class="parallax">
       			<img src="{{fullanime.cover_image}}" ng-click="openImage()">
@@ -9,7 +9,7 @@
       		<span class="detailtitle">
 	            {{fullanime.title}}
 	            <div class="detailalternativetitle">
-					{{anime.anime.alternate_title}}
+					{{fullanime.alternate_title}}
 				</div>
 	        </span>
     	</div>
@@ -30,7 +30,7 @@
 					{{anime.episodes_watched}} / {{anime.anime.episode_count}}
 				</div>
 				<div class="add-episode-button">
-				<button class="button button-clear button-assertive ink" style="font-size: 16px;">+1</button>
+				<button class="button button-clear button-assertive ink" style="font-size: 16px;" ng-click="addEpisodeClicked()">+1</button>
 				</div>
 				<div class="cardsubtitle">
 					Rating
@@ -54,7 +54,7 @@
 					Synopsis
 				</div>
 				<p class="synopsis">
-					{{anime.anime.synopsis}}
+					{{fullanime.synopsis}}
 				</p>
 			</div>
 			<div class="list card">
@@ -62,39 +62,39 @@
 					Airing Status
 				</div>
 				<div class="cardsubdetail">
-					{{anime.anime.status}}
+					{{fullanime.status}}
 				</div>
 				<div class="cardsubtitleright">
 					Community Rating
 				</div>
 				<div class="cardsubdetailright">
-					{{anime.anime.community_rating*2}} / 10
+					{{fullanime.community_rating*2}} / 10
 				</div>
 				<div class="cardsubtitle">
 					Rating
 				</div>
 				<div class="cardsubdetail">
-					{{anime.anime.age_rating}}
+					{{fullanime.age_rating}}
 				</div>
 				<div class="cardsubtitleright">
 					Type
 				</div>
 				<div class="cardsubdetailright">
-					{{anime.anime.show_type}}
+					{{fullanime.show_type}}
 				</div>
 				<div class="cardsubtitle">
 					Started Airing
 				</div>
 				<div class="cardsubdetail">
-					{{anime.anime.started_airing}}
+					{{fullanime.started_airing}}
 				</div>
 				<div class="cardsubtitleright">
 					Finished Airing
 				</div>
 				<div class="cardsubdetailright">
-					{{anime.anime.finished_airing}}
+					{{fullanime.finished_airing}}
 				</div>
-				<a class="button button-block button-clear button-assertive ink" href="https://youtu.be/2l4u3FEBwPs" target="_blank">watch trailer</a>
+				<a class="button button-block button-clear button-assertive ink" href="" target="_blank">watch trailer</a>
 			</div>
 			<div class="list card">
 				<div class="cardsubtitle synopsistitle">
@@ -106,6 +106,25 @@
 			</div>
 
 		</div>
+
+		<div id="sendingmodal" class="modal">
+	    <div class="modal-content">
+	      <h4>Sending data...</h4>
+	       <div class="preloader-wrapper big active">
+		    <div class="spinner-layer spinner-blue-only">
+		      <div class="circle-clipper left">
+		        <div class="circle"></div>
+		      </div><div class="gap-patch">
+		        <div class="circle"></div>
+		      </div><div class="circle-clipper right">
+		        <div class="circle"></div>
+		      </div>
+		    </div>
+		  </div>
+	    </div>
+	</div>
+
+
 	</ion-content>
 </ion-view>
 

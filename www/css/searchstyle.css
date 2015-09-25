@@ -1,11 +1,11 @@
 /* Empty. Add your own CSS if you like */
 /*Header bar css*/
-.bar-energized-900 {
-	height: 56px;
+.bar-dark {
+	height: 81px;
 	background-color: #FF5722 !important;
 	background-color: #455A64 !important;
 	box-shadow: 10px;
-	visibility: hidden;
+	/*visibility: hidden;*/
 }
 .title {
 	padding-top: 5px;
@@ -14,22 +14,39 @@
 	left: 54px !important;
 	visibility: hidden;
 }
+.left-buttons {
+	position: relative;
+	left: -45px;
+	top: 30px;
+}
+.right-buttons {
+	position: relative;
+	top: 26px;
+	visibility: visible;
+	right: 2px;
+}
 .ion-android-menu{
 	font-size: 24px !important;
 	margin-left: 16px;
 	margin-top: 12px;
-	visibility: visible;
+	visibility: hidden;
 }
 .ink-ripple {
 	opacity: 1 !important;
 }
 .query {
 	position: relative;
-	left: -80px;
-	top: 6px;
+	width: 100%;
+	/*top: 6px;*/
 	color: white !important;
-	margin-left: 70px !important;
+	margin-left: 100%;
 	font-size: 18px !important;
+}
+.back-button {
+	visibility: visible;
+	position: relative;
+	top: 33px;
+	left: 8px;
 }
 .button.button-clear.icon.ion-android-search:before {
 	font-size: 24px;
@@ -55,8 +72,8 @@
 }
 .ion-android-arrow-back:before {
 	font-size: 24px !important;
-	margin-left: 16px;
-	padding-top: 16px;
+	/*margin-left: 16px;*/
+	/*padding-top: 16px;*/
 }
 /*End header bar css*/
 .icon.ion-android-add {
@@ -97,11 +114,6 @@
 }
 
 
-
-/*modal css*/
-.bar-dark {
-	height: 56px;
-}
 
 .slide-in-right {
   -webkit-transform: translateX(100%);

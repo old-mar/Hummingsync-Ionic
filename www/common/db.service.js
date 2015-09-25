@@ -84,21 +84,26 @@ angular.module('starter')
 
   function refresh() {
     Animes.animelist.length = 0;
-    $http.get('https://hummingbird.me/api/v1/users/'+ Animes.username + '/library').then(function(res) {
-        console.log('data length: ' + res.data.length);
+    $http({
+      method: 'GET',
+      url: 'https://hummingbirdv1.p.mashape.com/users/'+ Animes.username + '/library?auth_token=' + Animes.auth_token + "&status=" + Animes.filter,
+      headers: {
+        'X-Mashape-Key': 'WYIjQHHS7pmshGy6W5vPf63xlY1up1bePRvjsn3K7AoVDYwltl',
+        'Accept': 'application/json'
+      }
+    }).then(function(res) {
+      console.log('data length: ' + res.data.length);
         console.log('pre-length: ' + Animes.animelist.length);
-        for(var i = 0; i < res.data.length; i++) {
-          console.log('inside loop?~??');
-          // console.log(JSON.stringify(data[i]));
-          Animes.animelist.push(res.data[i]);
-        }
-        console.log('Pushed data to animelist');
-        console.log('post-length: ' + Animes.animelist.length);
-            // $scope.$broadcast('scroll.refreshComplete');
+      for(var i = 0; i < res.data.length; i++) {
+        console.log('Pushing library data entries...');
+        // console.log(JSON.stringify(data[i]));
+        Animes.animelist.push(res.data[i]);
+      }
+      console.log('Pushed data to animelist');
+      console.log('post-length: ' + Animes.animelist.length);
     },
     function(error) {
       console.log(error);
-      // $scope.$broadcast('scroll.refreshComplete');
     });
 
     // return $q.when(_db.destroy());

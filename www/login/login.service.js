@@ -1,12 +1,12 @@
 angular.module('starter')
-.factory('Animes', function() {
+.factory('Login', function() {
   
-  var animelist = [];
+  // var animelist = [];
 
-  var selectedAnimeId = undefined;
-  return {
-    animelist: animelist,
-    selectedAnimeId: selectedAnimeId
-  };
+  // var selectedAnimeId = undefined;
+  // return {
+  //   animelist: animelist,
+  //   selectedAnimeId: selectedAnimeId
+  // };
 
 });

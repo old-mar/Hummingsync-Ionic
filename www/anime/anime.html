@@ -1,15 +1,16 @@
 <ion-view title="Anime">
 
- 	<link href="css/style.css" rel="stylesheet"></link>
-	<ion-content ng-controller="AnimeCtrl">
+ 	<!-- <link href="css/style.css" rel="stylesheet"></link> -->
+	<ion-content class="has-header" delegate-handle="animelistcontent">
 		
 		<ion-refresher pulling-icon="ion-android-refresh" spinner="android" on-refresh="refresh()"></ion-refresher>
 		
-		<div class="list">
+		<ion-list>
 			<div class="item item-divider">
-				Watching
+				Library
+				<pre>{{sort}}</pre>
 			</div>
-			<ion-item class="card ink" collection-repeat="anime in animelist" item-render-buffer="8" ng-click="openSelectedAnime(anime.id,anime.anime.id)">
+			<ion-item class="ink" collection-repeat="anime in animelist | orderBy: sort.order" item-render-buffer="16" ng-click="openSelectedAnime(anime.id,anime.anime.id)">
 			<img ng-src="{{anime.anime.cover_image}}" height="142" width="98" class="coverimage">
 			<div class="cardinfo">
 			<div class="animelisttitle">{{anime.anime.title}}</div>
@@ -24,7 +25,7 @@
 			</div>
 			</ion-item>
 			
-		</div>
+		</ion-list>
 
 	</ion-content>
 	<!-- <div class="fixed-action-btn" style="bottom: 20px; right: 20px;">
@@ -33,6 +34,26 @@
 		</a>
 	</div> -->
 	<button class="button button-positive button-fab button-fab-bottom-right ink icon ion-android-search" ng-click="openSearch()"></button>
+
+
+	<div id="openmodal" class="modal">
+	    <div class="modal-content">
+	      <h4 class="modaltext">Downloading data...</h4>
+	       <div class="preloader-wrapper medium active">
+		    <div class="spinner-layer spinner-blue-only">
+		      <div class="circle-clipper left">
+		        <div class="circle"></div>
+		      </div><div class="gap-patch">
+		        <div class="circle"></div>
+		      </div><div class="circle-clipper right">
+		        <div class="circle"></div>
+		      </div>
+		    </div>
+		  </div>
+	    </div>
+	</div>
+
+
 </ion-view>
 
 

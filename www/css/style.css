@@ -1,27 +1,37 @@
 /* Empty. Add your own CSS if you like */
 /*Header bar css*/
+
 .bar-energized-900 {
-	height: 56px;
+	height: 81px;
 	background-color: #FF5722 !important;
 	background-color: #455A64 !important;
 	box-shadow: 10px;
-	display: inline;
 }
 .title {
 	padding-top: 5px;
 	opacity: 1;
 	position: absolute;
+	top: 25px !important;
 	left: 54px !important;
 }
 .ion-android-menu:before {
 	font-size: 24px !important;
-	margin-left: 16px;
-	margin-top: 12px;
-	display: r
+}
+.left-buttons {
+	position: relative;
+	left: -45px;
+	top: 30px;
+}
+.right-buttons {
+	position: relative;
+	top: 28px;
+	visibility: visible;
+	right: 2px;
 }
 .ink-ripple {
 	opacity: 0.2 !important;
 }
+
 .button.button-clear.icon.ion-android-more-vertical {
 	font-size: 10px;
 	margin-right: 1px;
@@ -33,22 +43,30 @@
 	margin-top: -9px;
 	margin-right: -15px;
 }
+.button.button-clear.icon.ion-android-funnel.ink:before {
+	font-size: 24px;
+	/*margin-right: 1px;*/
+	margin-top: 2px;
+	position: relative;
+}
 .button.button-clear.icon.ion-android-more-vertical.ink:before {
 	font-size: 24px;
-	margin-right: 1px;
-	margin-top: 8px;
+	/*margin-right: 1px;*/
+	/*margin-top: 8px;*/
+	position: relative;
 }
-.ion-android-arrow-back:before {
-	font-size: 24px !important;
-	margin-left: 16px;
-	padding-top: 16px;
+
+.button.back-button.buttons.button-clear.header-item {
+	visibility: hidden;
+	opacity: 0;
 }
 /*End header bar css*/
 .icon.ion-android-add {
 	font-size: 20px;
 }
-.scroll-content {
+.has-header {
 	overflow: visible !important;
+	padding-top: 25px;
 }
 
 .cardinfo {
@@ -67,27 +85,65 @@
 	margin-right: 0px;
 	margin-bottom: 0px;
 }
-
+.collection-repeat-container {
+	
+}
 .card.ink.item {
-	padding-left: 10px;
-	height: 145px !important;
-	padding-top: -1000px !important;
-	padding-bottom: -1000px !important;
-	width: 360px !important;
+	margin-left: 10px;
+	margin-right: -10px;
+	margin-bottom: 10px !important;
+	height: auto !important;
+	max-width: 95% !important;
 }
 .animelisttitle {
 	font-weight: bold;
 	font-size: 16px;
 
 }
-
+.button-fab {
+	bottom: 64px !important;
+}
 
 
 /*modal css*/
 .bar-dark {
 	height: 56px;
 }
+.toast{
+	position: relative;
+	top: -67px !important;
+	margin-left: 10px;
+	width: auto;
+	margin-right: 80px;
+}
 
+/*Loading Modal css*/
+.modal {
+	background-color: #454A44;
+	position: relative;
+	top: 225px !important;
+	margin-top: 20px;
+	height: 10px !important;
+	max-height: 10% !important;
+	min-height: 25% !important;
+}
+.modaltext {
+	font-size: 16px;
+	color: white;
+	position: relative;
+	top: 50px;
+	left: 10px !important;
+}
+.popover-wrapper {
+	position: relative;
+	top: 75px;
+	left: 15px !important;
+}
+.preloader-wrapper {
+	position: relative;
+	left: 190px;
+	top: 5px;
+}
 .slide-in-right {
   -webkit-transform: translateX(100%);
     transform: translateX(100%); }

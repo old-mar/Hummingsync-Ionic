@@ -6,25 +6,24 @@
         </ion-nav-back-button>
         <ion-nav-buttons side="left">
          	<button class="button button-clear icon ion-android-menu ink" menu-toggle="left"></button>
-        </ion-nav-buttons>
-        	
-        <ion-nav-buttons side="right">
-          <!-- <a class="button button-clear icon ion-android-refresh ink" href="https://hummingbird.me/api/v1/users/cyalins/library.json" download="library"></a> -->
-         	<form>
+         	<form name="searchform">
         		<input placeholder="Search" type="text" class="query"
         		ng-model="sc.searchQuery">
         	</form>
-    	<button class="button button-clear icon ion-android-search ink" 
-    	ng-click="submitQuery()"></button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+          <!-- <a class="button button-clear icon ion-android-refresh ink" href="https://hummingbird.me/api/v1/users/cyalins/library.json" download="library"></a> -->
+    		<button class="button button-clear icon ion-android-search ink" type="submit"
+    	ng-click="submitQuery()" form="searchform"></button>
         </ion-nav-buttons>
       </ion-nav-bar>
- 	<link href="css/searchstyle.css" rel="stylesheet"></link>
+ 	<!-- <link href="css/searchstyle.css" rel="stylesheet"></link> -->
 	<ion-content>
 		<div class="list">
 			<div class="item item-divider">
 				Results
 			</div>
-			<ion-item class="card ink" collection-repeat="anime in searchresults" item-render-buffer="8" ng-click="openSelectedAnime(anime.id)">
+			<ion-item class="card ink" collection-repeat="anime in searchresults" item-render-buffer="8" ng-click="openSelectedAnime(anime.id,anime.id)">
 				<img ng-src="{{anime.cover_image}}" height="142" width="98" class="coverimage">
 				<div class="cardinfo">
 					<div class="animelisttitle">
@@ -41,6 +40,23 @@
 			</ion-item>
 			
 		</div>
+
+	<div id="openmodal" class="modal">
+	    <div class="modal-content">
+	      <h4>Downloading data...</h4>
+	       <div class="preloader-wrapper big active">
+		    <div class="spinner-layer spinner-blue-only">
+		      <div class="circle-clipper left">
+		        <div class="circle"></div>
+		      </div><div class="gap-patch">
+		        <div class="circle"></div>
+		      </div><div class="circle-clipper right">
+		        <div class="circle"></div>
+		      </div>
+		    </div>
+		  </div>
+	    </div>
+	</div>
 
 	</ion-content>
 </ion-view>

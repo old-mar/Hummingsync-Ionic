@@ -3,7 +3,8 @@
 	background: transparent !important;
 	border: none !important;
 	border-style: none !important;
-	box-shadow: none;
+	/*box-shadow: none;*/
+	visibility: hidden;
 }
 .username {
 	/*margin-top: -500px;*/
@@ -30,8 +31,9 @@
 	top: 8px;
 }
 .backgroundimage {
-	margin-top: -56px;
+	margin-top: -68px;
 	height: 676px;
+	background-image: url(../img/fatesnubw.jpg), linear-gradient(to bottom, rgba(200,200,200,0), rgba(10,10,10,0.5)) !important;
 }
 
 .button-clear {
@@ -72,4 +74,38 @@
 	color: black;
 	font-size: 20px;
 	line-height: 120%;
+}
+.toast{
+	position: relative;
+	top: -55px !important;
+	margin-left: 10px;
+	width: auto;
+	margin-right: 10px;
+}
+/*Loading Modal css*/
+.modal {
+	background-color: #454A44;
+	position: relative;
+	top: -160px !important;
+	margin-top: 20px;
+	height: 10px !important;
+	max-height: 10% !important;
+	min-height: 25% !important;
+}
+.modaltext {
+	font-size: 16px;
+	color: white;
+	position: relative;
+	left: 15px !important;
+	top: 40px !important;
+}
+.popover-wrapper {
+	position: relative;
+	top: 75px;
+	left: 15px !important;
+}
+.preloader-wrapper {
+	position: relative;
+	left: 180px;
+	top: -5px;
 }
