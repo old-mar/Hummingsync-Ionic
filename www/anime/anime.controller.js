@@ -1,7 +1,7 @@
 angular.module('starter')
 .controller('AnimeCtrl', function($scope, $state, $http, $ionicSideMenuDelegate, $ionicScrollDelegate, $document, DebugService, ionicMaterialInk, ionicMaterialMotion, Animes, DbService, filterFilter) {
   ionicMaterialInk.displayEffect();
-  ionicMaterialMotion.blinds();
+
    $(document).ready(function() {
     $('select').material_select();
   });
