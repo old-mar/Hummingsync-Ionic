@@ -4,9 +4,9 @@ Please report any bugs and issues!
 
 ## Download
 Download the latest release here:
-[Download](https://github.com/cyalins/Hummingsync/releases/download/v0.1-alpha/com.cyalins.hummingsync-v0.1-alpha.apk)
+[Download Latest Release](https://github.com/cyalins/Hummingsync/releases/download/v0.02-alpha/com.cyalins.hummingsync-v0.02-alpha.apk)
 
->Latest version: v0.1-alpha - updated 27th September 2015
+>Latest version: v0.02-alpha - updated 29th September 2015
 
 ##About
 Hummingsync is free and open source, and uses the [Ionic Framework](ionicframework.com).
