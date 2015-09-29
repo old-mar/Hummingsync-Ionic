@@ -22,9 +22,12 @@ angular.module('starter')
   // $scope.anime = DbService.get($stateParams.animeId);
   // console.log($stateParams.animeId);
 
-  $scope.anime = Animes.selectedAnime[0];
+  $scope.anime = Animes.selectedAnime;
+  $scope.animedetails = Animes.selectedAnimeDetails;
   $scope.fullanime = Animes.selectedAnimeFull;
   $scope.auth_token = Animes.auth_token;
+  $scope.animeposter = Animes.animeposter;
+  $scope.community_rating = parseFloat($scope.animedetails.community_rating).toFixed(2);
 
   //editor
   // $ionicModal.fromTemplateUrl('animeinfo/animeedit.html', function(modal) {
@@ -59,10 +62,10 @@ angular.module('starter')
   $scope.addEpisodeClicked = function() {
     console.log("Attempting to add an episode to counter...");
     $('#sendingmodal').openModal();
-    console.log("Posting to URL: https://hbrd-v1.p.mashape.com/libraries/" + $scope.fullanime.id);
+    console.log("Posting to URL: https://hbrd-v1.p.mashape.com/libraries/" + $scope.animedetails.id);
     $http({
       method: 'POST',
-      url: "https://hbrd-v1.p.mashape.com/libraries/" + $scope.fullanime.id,
+      url: "https://hbrd-v1.p.mashape.com/libraries/" + $scope.animedetails.id,
       data: { 
         "auth_token": $scope.auth_token,
         "increment_episodes": 'true'
@@ -93,7 +96,7 @@ angular.module('starter')
     if ($scope.anime.private = true) {$scope.anime.private = 'private'} if ($scope.anime.private = false) {$scope.anime.private = 'public'};
     $http({
       method: 'POST',
-      url: "https://hbrd-v1.p.mashape.com/libraries/" + $scope.fullanime.id,
+      url: "https://hbrd-v1.p.mashape.com/libraries/" + $scope.animedetails.id,
       data: { 
         "auth_token": $scope.auth_token,
         "episodes_watched": $scope.anime.episodes_watched,

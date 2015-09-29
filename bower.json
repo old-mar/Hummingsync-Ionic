@@ -10,7 +10,8 @@
     "angular-ui-router-css": "*",
     "angular-ui-router-styles": "~0.0.6",
     "ionic-material": "~0.4.2",
-    "pouchdb": "~4.0.0"
+    "pouchdb": "~4.0.0",
+    "polymer": "Polymer/polymer#^1.1.0"
   },
   "resolutions": {
     "ionic": "1.1.0",

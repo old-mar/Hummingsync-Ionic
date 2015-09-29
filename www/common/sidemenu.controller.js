@@ -1,5 +1,7 @@
 angular.module('starter')
-.controller('SideMenuCtrl', function($scope, $state, $location, $http, $ionicPopover, Animes, DbService) {
+.controller('SideMenuCtrl', function($scope, $state, $location, $http, $ionicPopover, ionicMaterialInk, Animes, DbService) {
+  
+  ionicMaterialInk.displayEffect();
   $(".button-collapse").sideNav();
   $scope.goToDebug = function() {
   	$state.go('app.debug', {reload: true});
@@ -31,6 +33,8 @@ angular.module('starter')
     Materialize.toast('Logged out of ' + Animes.username, 4000);
     Animes.username = undefined;
     Animes.auth_token = undefined;
+    window.localStorage['username'] = undefined;
+    window.localStorage['auth_token'] = undefined;
   	$state.go('app.login');
   };
 
@@ -65,10 +69,11 @@ angular.module('starter')
   };
 
   $scope.setSort = function(sort) {
+    $scope.closePopover();
     console.log(sort);
     Animes.sort.order = sort;
-    $scope.popover.hide();
-    $scope.popover.remove();
-    DbService.refresh();
+
+    $scope.sortbypopover.remove();
+    // DbService.refresh();
   };
 });

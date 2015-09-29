@@ -13,7 +13,7 @@
 .button.button-clear.icon.ion-android-more-vertical:before {
 	font-size: 24px;
 	color: white;
-	visibility: visible;
+	visibility: hidden;
 }
 .button.button-clear.icon.ion-android-refresh {
 	color: #B6B6B6;
@@ -24,7 +24,7 @@
 .right-buttons {
 	position: relative;
 	top: 30px;
-	visibility: visible;
+	visibility: hidden;
 }
 .back-button {
 	visibility: visible;

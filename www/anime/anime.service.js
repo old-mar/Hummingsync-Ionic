@@ -4,9 +4,10 @@ angular.module('starter')
 
   var animelist = [];
 
-  var selectedAnime = undefined;
-  var selectedAnimeFull = undefined;
+  var selectedAnime = [];
+  var selectedAnimeFull = {"title": "ded", "community_rating": 0};
   var searchresults = [];
+  var selectedAnimeDetails = {"community_rating" : 0};
 
   var username = undefined;
   var auth_token = undefined;

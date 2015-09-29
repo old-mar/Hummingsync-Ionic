@@ -10,10 +10,11 @@
 				Library
 				<pre>{{sort}}</pre>
 			</div>
-			<ion-item class="ink" collection-repeat="anime in animelist | orderBy: sort.order" item-render-buffer="16" ng-click="openSelectedAnime(anime.id,anime.anime.id)">
+			<ion-item class="waves-effect" collection-repeat="anime in animelist | orderBy: sort.order" item-render-buffer="16" ng-click="openSelectedAnime(anime.id,anime.anime.id)">
 			<img ng-src="{{anime.anime.cover_image}}" height="142" width="98" class="coverimage">
 			<div class="cardinfo">
 			<div class="animelisttitle">{{anime.anime.title}}</div>
+			<br>
 			<br>
 			Watched: {{anime.episodes_watched}}/{{anime.anime.episode_count}}
 			<br>

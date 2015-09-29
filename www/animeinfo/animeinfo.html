@@ -4,16 +4,16 @@
 	<ion-content class="ioncontent">
 		<div class="parallax-container">
       		<div class="parallax">
-      			<img src="{{fullanime.cover_image}}" ng-click="openImage()">
+      			<img src="{{animedetails.cover_image}}" ng-click="openImage()">
       		</div>
       		<span class="detailtitle">
-	            {{fullanime.title}}
+	            {{animedetails.title}}
 	            <div class="detailalternativetitle">
-					{{fullanime.alternate_title}}
+					{{animedetails.alternate_title}}
 				</div>
 	        </span>
     	</div>
-		<div class="animedetailcontent">
+		<div class="animedetailcontent animate-fade-slide-in-right">
 			
 			<div class="card">
 				<br>
@@ -54,7 +54,7 @@
 					Synopsis
 				</div>
 				<p class="synopsis">
-					{{fullanime.synopsis}}
+					{{animedetails.synopsis}}
 				</p>
 			</div>
 			<div class="list card">
@@ -62,39 +62,41 @@
 					Airing Status
 				</div>
 				<div class="cardsubdetail">
-					{{fullanime.status}}
+					{{animedetails.status}}
 				</div>
 				<div class="cardsubtitleright">
 					Community Rating
 				</div>
 				<div class="cardsubdetailright">
-					{{fullanime.community_rating*2}} / 10
+					{{community_rating}} / 10
 				</div>
 				<div class="cardsubtitle">
 					Rating
 				</div>
 				<div class="cardsubdetail">
-					{{fullanime.age_rating}}
+					{{animedetails.age_rating}}
 				</div>
 				<div class="cardsubtitleright">
 					Type
 				</div>
 				<div class="cardsubdetailright">
-					{{fullanime.show_type}}
+					{{animedetails.show_type}}
 				</div>
 				<div class="cardsubtitle">
 					Started Airing
 				</div>
 				<div class="cardsubdetail">
-					{{fullanime.started_airing}}
+					{{animedetails.started_airing}}
 				</div>
 				<div class="cardsubtitleright">
 					Finished Airing
 				</div>
 				<div class="cardsubdetailright">
-					{{fullanime.finished_airing}}
+					{{animedetails.finished_airing}}
 				</div>
-				<a class="button button-block button-clear button-assertive ink" href="" target="_blank">watch trailer</a>
+				<div class="card-action">
+	              <button class="button button-block button-clear button-assertive ink-dark editentry" ng-click="">watch trailer</button>
+	            </div>
 			</div>
 			<div class="list card">
 				<div class="cardsubtitle synopsistitle">

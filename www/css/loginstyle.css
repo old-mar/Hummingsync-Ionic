@@ -6,6 +6,8 @@
 	/*box-shadow: none;*/
 	visibility: hidden;
 }
+
+
 .username {
 	/*margin-top: -500px;*/
 	/*margin-left: 56px;*/
@@ -19,6 +21,7 @@
 }
 .password {
 	/*background-color: white;*/
+	text-align: center !important;
 	position: relative;
 	top: 50px;
 	left: -93px;
@@ -32,7 +35,8 @@
 }
 .backgroundimage {
 	margin-top: -68px;
-	height: 676px;
+	max-width: 100%;
+	height: auto;
 	background-image: url(../img/fatesnubw.jpg), linear-gradient(to bottom, rgba(200,200,200,0), rgba(10,10,10,0.5)) !important;
 }
 

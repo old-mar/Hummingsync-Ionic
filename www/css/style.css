@@ -31,7 +31,9 @@
 .ink-ripple {
 	opacity: 0.2 !important;
 }
-
+ion-item {
+	height: 175px !important;
+}
 .button.button-clear.icon.ion-android-more-vertical {
 	font-size: 10px;
 	margin-right: 1px;
@@ -61,6 +63,19 @@
 	opacity: 0;
 }
 /*End header bar css*/
+
+/*Start Tab css*/
+.tabs {
+	overflow: auto;
+	width: auto;
+}
+.tab-1 {
+	padding-right: 50px !important;
+}
+
+/*End tab css*/
+
+
 .icon.ion-android-add {
 	font-size: 20px;
 }
@@ -75,7 +90,7 @@
 	display: inline;
 	float: left;
 	margin-left: 120px;
-	margin-top: -127px;
+	margin-top: -148px;
 	margin-bottom: 0px;
 	padding-right: 10px;
 }
@@ -98,7 +113,7 @@
 .animelisttitle {
 	font-weight: bold;
 	font-size: 16px;
-
+	overflow: auto;
 }
 .button-fab {
 	bottom: 64px !important;

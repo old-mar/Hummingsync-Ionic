@@ -11,48 +11,30 @@ angular.module('starter')
   $scope.animelist = Animes.animelist;
 
   $scope.openSelectedAnime = function(animeId,animelibId) {
-      console.log("Downloading full show details...");
-      $('#openmodal').openModal();
-  		$scope.animelist.length = 0;
-      $http({
-        method: 'GET',
-        url: 'https://hummingbirdv1.p.mashape.com/users/'+ Animes.username + '/library',
-        headers: {
-          'X-Mashape-Key': 'WYIjQHHS7pmshGy6W5vPf63xlY1up1bePRvjsn3K7AoVDYwltl',
-          'Accept': 'application/json'
-        }
-      }).then(function(res) {
-        console.log('data length: ' + res.data.length);
-        console.log('pre-length: ' + Animes.animelist.length);
-        for(var i = 0; i < res.data.length; i++) {
-          console.log('Pushing library data entries...');
-          // console.log(JSON.stringify(data[i]));
-          Animes.animelist.push(res.data[i]);
-        }
-        console.log('Pushed data to animelist');
-        console.log('post-length: ' + Animes.animelist.length);
-        Animes.selectedAnime = filterFilter(Animes.animelist, {id:animeId}, true);
-        $http({
-          method: 'GET',
-          url: 'https://hbrd-v1.p.mashape.com/anime/' + animelibId,
-          headers: {
-            'X-Mashape-Key': 'WYIjQHHS7pmshGy6W5vPf63xlY1up1bePRvjsn3K7AoVDYwltl',
-            'Accept': 'application/json',
-          }
-        }).success(function(response){
-          $('#openmodal').closeModal();
-          Animes.selectedAnimeFull = response;
-          console.log("Retrieved full anime details.");
-          console.log(response);
-        }).error(function(response){
-          $('#openmodal').closeModal();
-          console.log("Unable to retrieve full anime details.");
-          console.log(response);
-        }).then(function(){
-          $state.go('app.animeinfo', {animeId: animeId});
-        });
-      });
-    };
+    console.log("Downloading full show details...");
+    $('#openmodal').openModal();
+    // Animes.animeposter = filterFilter(Animes.animelist, {id:animeId}, true)[0].anime.cover_image;
+    $http({
+      method: 'GET',
+      url: 'https://hbrd-v1.p.mashape.com/anime/' + animelibId,
+      headers: {
+        'X-Mashape-Key': 'WYIjQHHS7pmshGy6W5vPf63xlY1up1bePRvjsn3K7AoVDYwltl',
+        'Accept': 'application/json',
+      }
+    }).success(function(response){
+      $('#openmodal').closeModal();
+      Animes.selectedAnimeDetails = response;
+      // Animes.animeposter = Animes.selectedAnimeFull.cover_image;
+      console.log("Retrieved full anime details.");
+      console.log(response);
+    }).error(function(response){
+      $('#openmodal').closeModal();
+      console.log("Unable to retrieve full anime details.");
+      console.log(response);
+    }).then(function(){
+      $state.go('app.animeinfo', {animeId: animeId});
+    });
+  };
   $scope.submitQuery = function() {
     var option = {
       method: 'GET',

@@ -3,9 +3,23 @@ angular.module('starter')
   ionicMaterialInk.displayEffect();
   ionicMaterialMotion.blinds();
 
-  $scope.username = undefined;
-  $scope.password = undefined;
-  $scope.loginerrorShow = false;
+  // window.localStorage['username'] = undefined;
+  console.log("username stored: " + window.localStorage['username'])
+  if (window.localStorage['username'] === "undefined")
+    { 
+      console.log("No username stored");
+      $scope.username = undefined;
+      $scope.password = undefined;
+      $scope.loginerrorShow = false;
+    } else {
+      console.log("Username found");
+      Animes.auth_token = window.localStorage['auth_token'];
+      Animes.username = window.localStorage['username'];
+      $state.go('app.animelist');
+      Materialize.toast('Auto-logged in as ' + Animes.username, 4000);
+      console.log(Animes.filter);
+      DbService.refresh();
+    }
 
   var showCircle = false;
   Animes.filter = 'currently-watching';
@@ -30,9 +44,12 @@ angular.module('starter')
       $('#loadingmodal').closeModal();
       Animes.username = $scope.username;
   		Animes.auth_token = response;
+      window.localStorage['auth_token'] = Animes.auth_token;
+      window.localStorage['username'] = Animes.username;
       $scope.username = undefined;
       $scope.password = undefined;
       console.log("Successful authentication; auth_token recieved.");
+      console.log("localstorage auth token = " + window.localStorage['auth_token']);
   		$state.go('app.animelist');
       console.log(Animes.filter);
       DbService.refresh();

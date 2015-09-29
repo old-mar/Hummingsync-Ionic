@@ -18,7 +18,7 @@ ion-content {
 .right-buttons {
 	position: relative;
 	top: 30px;
-	visibility: visible;
+	visibility: hidden;
 }
 .button.button-clear.icon.ion-android-funnel.ink {
 	visibility: hidden;
@@ -26,7 +26,7 @@ ion-content {
 .button.button-clear.icon.ion-android-more-vertical:before {
 	font-size: 24px;
 	color: white;
-	visibility: visible;
+	visibility: hidden;
 }
 .button.button-clear.icon.ion-android-refresh {
 	color: #B6B6B6;
@@ -103,6 +103,7 @@ ion-content {
 	max-width: 100%;
 	height: auto;
 	font-family: 'Roboto-Light', 'Roboto';
+	overflow: auto;
 }
 .detailalternativetitle {
 	position: relative;
