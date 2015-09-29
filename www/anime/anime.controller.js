@@ -1,6 +1,8 @@
 angular.module('starter')
 .controller('AnimeCtrl', function($scope, $state, $http, $ionicSideMenuDelegate, $ionicScrollDelegate, $document, DebugService, ionicMaterialInk, ionicMaterialMotion, Animes, DbService, filterFilter) {
   ionicMaterialInk.displayEffect();
+  DbService.refresh();
+  Materialize.toast('Logged in as ' + Animes.username, 4000);
   // ionicMaterialMotion.fadeSlideInRight();
    $(document).ready(function() {
     $('select').material_select();

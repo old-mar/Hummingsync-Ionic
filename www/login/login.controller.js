@@ -16,9 +16,9 @@ angular.module('starter')
       Animes.auth_token = window.localStorage['auth_token'];
       Animes.username = window.localStorage['username'];
       $state.go('app.animelist');
-      Materialize.toast('Auto-logged in as ' + Animes.username, 4000);
+      // Materialize.toast('Auto-logged in as ' + Animes.username, 4000);
       console.log(Animes.filter);
-      DbService.refresh();
+      // DbService.refresh();
     }
 
   var showCircle = false;
@@ -39,7 +39,7 @@ angular.module('starter')
         // 'X-Client-Id': '36e1c3a4fcc4d1eaea3b'
   		}
   	}).success(function(response){
-      Materialize.toast('Logged in as ' + $scope.username, 4000);
+      // Materialize.toast('Logged in as ' + $scope.username, 4000);
       var showCircle = false;
       $('#loadingmodal').closeModal();
       Animes.username = $scope.username;
@@ -52,7 +52,7 @@ angular.module('starter')
       console.log("localstorage auth token = " + window.localStorage['auth_token']);
   		$state.go('app.animelist');
       console.log(Animes.filter);
-      DbService.refresh();
+      // DbService.refresh();
   	}).error(function(response){
       var showCircle = false;
       $('#loadingmodal').closeModal();
