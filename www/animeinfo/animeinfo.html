@@ -3,10 +3,10 @@
  	<!-- <link href="css/animeinfostyle.css" rel="stylesheet"></link> -->
 	<ion-content class="ioncontent">
 		<div class="parallax-container">
-      		<div class="parallax">
+      		<div class="parallax animated pulse">
       			<img src="{{animedetails.cover_image}}" ng-click="openImage()">
       		</div>
-      		<span class="detailtitle">
+      		<span class="detailtitle animated fadeIn">
 	            {{animedetails.title}}
 	            <div class="detailalternativetitle">
 					{{animedetails.alternate_title}}
@@ -15,7 +15,7 @@
     	</div>
 		<div class="animedetailcontent animate-fade-slide-in-right">
 			
-			<div class="card">
+			<div class="card animated slideInUp">
 				<br>
 				<div class="cardsubtitle">
 					Status
@@ -49,7 +49,7 @@
 	            </div>
             </div>
 
-			<div class="card">
+			<div class="card animated slideInUp">
 				<div class="cardsubtitle synopsistitle">
 					Synopsis
 				</div>
@@ -57,7 +57,7 @@
 					{{animedetails.synopsis}}
 				</p>
 			</div>
-			<div class="list card">
+			<div class="list card animated slideInUp">
 				<div class="cardsubtitle" style="padding-top: 20px;">
 					Airing Status
 				</div>
@@ -68,7 +68,7 @@
 					Community Rating
 				</div>
 				<div class="cardsubdetailright">
-					{{community_rating}} / 10
+					{{community_rating}} / 5
 				</div>
 				<div class="cardsubtitle">
 					Rating
@@ -98,7 +98,7 @@
 	              <button class="button button-block button-clear button-assertive ink-dark editentry" ng-click="">watch trailer</button>
 	            </div>
 			</div>
-			<div class="list card">
+			<div class="list card animated slideInUp">
 				<div class="cardsubtitle synopsistitle">
 					Reviews
 				</div>
